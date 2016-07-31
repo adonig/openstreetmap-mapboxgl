@@ -3,7 +3,7 @@ A Mapbox GL style for OpenStreetMap
 
 ![Screenshot](screenshot.png "Screenshot")
 
-Build instructions (in a Docker container) are forthcoming to ease development. I will also release a small mbtiles using the OSM2VectorTiles project but here's the short of it:
+Build instructions (in a Docker container) are forthcoming to ease development. I will also release a small mbtiles using the OSM2VectorTiles project so you can nearly immediately start contributing but here's the short of it:
 
 1) Follow the instructions here to import a compatible OSM DB: https://github.com/geofabrik/openstreetmap-carto-vector-tiles/blob/master/README_VECTOR_TILES.md
 
