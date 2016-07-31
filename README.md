@@ -8,6 +8,7 @@ Ubuntu 16.04 works, as long as you upgrade to node4
 Add to /etc/apt/nodejs.list and then sudo apt-get update; sudo apt-get upgrade:
 
 deb https://deb.nodesource.com/node_4.x xenial main
+
 deb-src https://deb.nodesource.com/node_4.x xenial main
 
 2. Once Tessera is running, get an OpenLayers/Leaflet website up and running which can pull PBFs from Tessera. Use osm-v1.json as your style, possibly modifying the IP in the first few lines to point to your Tessera server.
