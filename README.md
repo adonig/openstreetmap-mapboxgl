@@ -5,11 +5,13 @@ Build instructions (in a Docker container) are forthcoming but here's the short 
 
 1. Follow the instructions here to import a compatible OSM DB: https://github.com/geofabrik/openstreetmap-carto-vector-tiles/blob/master/README_VECTOR_TILES.md
 Ubuntu 16.04 works, as long as you upgrade to node4 
-Add to /etc/apt/nodejs.list and then sudo apt-get update; sudo apt-get upgrade:
+To do so add the following lines to /etc/apt/nodejs.list:
 
 deb https://deb.nodesource.com/node_4.x xenial main
 
 deb-src https://deb.nodesource.com/node_4.x xenial main
+
+And then sudo apt-get update; sudo apt-get upgrade.
 
 2. Once Tessera is running, get an OpenLayers/Leaflet website up and running which can pull PBFs from Tessera. Use osm-v1.json as your style, possibly modifying the IP in the first few lines to point to your Tessera server.
 
