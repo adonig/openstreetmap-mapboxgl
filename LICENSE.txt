@@ -1,4 +1,4 @@
-OpenStreetMap Carto: A global map style for OpenStreetMap maps.
+OpenStreetMap MapboxGL: A global map style for OpenStreetMap maps.
 
 Created by stirringhalo and contributors.
 Based on openstreetmap-carto-vector-tiles by Rory McCann rory@technomancy.org.
