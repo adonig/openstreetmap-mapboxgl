@@ -1,0 +1,745 @@
+{
+	"version": 8,
+	"name": "osm",
+	"sources": {
+		"osm2vectortiles": {
+			"tiles": ["http://127.0.0.1:8080/pbfs/live/{z}/{x}/{y}.pbf"],
+			"type": "vector"
+		}
+	},
+	"layers": [
+                {
+                        "id": "necountries",
+                        "minzoom": 1,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "necountries",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [1,0.2],
+                                                [3,0.4]
+                                        ]
+                                },
+                                "line-color": "#ac46ac"
+                        },
+                        "interactive": true
+                },
+		{
+			"id": "world",
+			"maxzoom": 9,
+			"type": "fill",
+			"source": "osm2vectortiles",
+			"source-layer": "world",
+			"paint": {
+				"fill-color": "#f2efe9"
+			},
+			"interactive": true
+		},
+                {
+                        "id": "coast-poly",
+			"minzoom": 10,
+                        "type": "fill",
+                        "source": "osm2vectortiles",
+                        "source-layer": "coast-poly",
+                        "paint": {
+                                "fill-color": "#f2efe9"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "icesheet-poly",
+			"minzoom": 6,
+                        "type": "fill",
+                        "source": "osm2vectortiles",
+                        "source-layer": "icesheet-poly",
+                        "paint": {
+                                "fill-color": "#ddecec"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "icesheet-outlines",
+                        "minzoom": 6,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "icesheet-outlines",
+			"filter": [
+					"in",
+					"ice_edge",
+					"ice_ocean",
+					"ice_land"
+			],
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [6,0.375],
+                                                [10,0.75]
+                                        ]
+                                },
+                                "line-color": "#9cf"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "builtup",
+                        "minzoom": 8,
+			"maxzoom": 9,
+                        "type": "fill",
+                        "source": "osm2vectortiles",
+                        "source-layer": "builtup",
+                        "paint": {
+                                "fill-color": "#ddd"
+                        },
+                        "interactive": true
+                },
+
+
+
+                {
+                        "id": "highway-motorway-casing",
+                        "minzoom": 5,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-casing",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_motorway"
+                        ],
+                        "line-join": "round",
+                        "line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [5,0.125],
+                                                [19,6.75]
+                                        ]
+                                },
+                                "line-color": "#dc2a67"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "highway-motorway-fill",
+                        "minzoom": 5,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-fill",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_motorway"
+                        ],
+                        "line-join": "round",
+                        "line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [5,0.1],
+                                                [19,6.25]
+                                        ]
+                                },
+                                "line-color": "#e892a2"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "highway-trunk-casing",
+                        "minzoom": 5,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-casing",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_trunk"
+                        ],
+                        "line-join": "round",
+                        "line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [5,0.1],
+                                                [19,6.75]
+                                        ]
+                                },
+                                "line-color": "#c84e2f"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "highway-trunk-fill",
+                        "minzoom": 5,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-fill",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_motorway"
+                        ],
+                        "line-join": "round",
+                        "line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [5,0.75],
+                                                [19,5.75]
+                                        ]
+                                },
+                                "line-color": "#f9b29c"
+                        },
+                        "interactive": true
+                },
+
+                {
+                        "id": "highway-primary-casing",
+                        "minzoom": 8,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-casing",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_primary"
+                        ],
+                        "line-join": "round",
+			"line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [8,0.25],
+                                                [19,6.75]
+                                        ]
+                                },
+                                "line-color": "#B88B35"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "highway-primary-fill",
+                        "minzoom": 8,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-fill",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_primary"
+                        ],
+                        "line-join": "round",
+                        "line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [8,0.125],
+                                                [19,6.25]
+                                        ]
+                                },
+                                "line-color": "#FCD6A4"
+                        },
+                        "interactive": true
+                },
+
+                {
+                        "id": "highway-secondary-casing",
+                        "minzoom": 9,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-casing",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_secondary"
+                        ],
+                        "line-join": "round",
+                        "line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [9,0.25],
+                                                [19,6.75]
+                                        ]
+                                },
+                                "line-color": "#707d05"
+                        },
+                        "interactive": true
+               },
+               {
+                        "id": "highway-secondary-fill",
+                        "minzoom": 9,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-casing",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_secondary"
+                        ],
+                        "line-join": "round",
+                        "line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [9,0.125],
+                                                [19,6.25]
+                                        ]
+                                },
+                                "line-color": "#F6F9BE"
+                        },
+                        "interactive": true
+                },
+
+
+                {
+                        "id": "highway-tertiary-casing",
+                        "minzoom": 12,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-casing",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_tertiary"
+                        ],
+                        "line-join": "round",
+                        "line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [12,0.825],
+                                                [19,6.75]
+                                        ]
+                                },
+                                "line-color": "#8f8f8f"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "highway-residential-casing",
+                        "minzoom": 13,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-casing",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_residential"
+                        ],
+                        "line-join": "round",
+                        "line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [13,0.825],
+                                                [19,4.25]
+                                        ]
+                                },
+                                "line-color": "#bbb"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "highway-service-casing",
+                        "minzoom": 14,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-casing",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_service"
+                        ],
+                        "line-join": "round",
+                        "line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [14,0.25],
+                                                [19,2.75]
+                                        ]
+                                },
+                                "line-color": "#bbb"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "highway-living-street-casing",
+                        "minzoom": 13,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-casing",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_living_street"
+                        ],
+                        "line-join": "round",
+                        "line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [13,0.825],
+                                                [19,4.25]
+                                        ]
+                                },
+                                "line-color": "#bbb"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "highway-pedestrian-casing",
+                        "minzoom": 13,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-casing",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_pedestrian"
+                        ],
+                        "line-join": "round",
+                        "line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [13,0.25],
+                                                [19,4.25]
+                                        ]
+                                },
+                                "line-color": "#999"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "highway-road-casing",
+                        "minzoom": 14,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "roads-casing",
+                        "filter": [
+                                        "==",
+                                        "feature",
+                                        "highway_road"
+                        ],
+                        "line-join": "round",
+                        "line-cap": "round",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [14,0.25],
+                                                [19,2.75]
+                                        ]
+                                },
+                                "line-color": "#bbb"
+                        },
+                        "interactive": true
+                },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                {
+                        "id": "power-line",
+                        "minzoom": 14,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "power-line",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [14,0.5],
+                                                [19,1.2]
+                                        ]
+                                },
+                                "line-color": "#888"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "power-minorline",
+                        "minzoom": 16,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "power-minorline",
+                        "paint": {
+                                "line-width": {
+                                        "stops": [
+                                                [16,0.3],
+                                                [18,0.5]
+                                        ]
+                                },
+                                "line-color": "#888"
+                        },
+                        "interactive": true
+                },
+
+
+
+                {
+                        "id": "buildings",
+                        "minzoom": 13,
+                        "type": "fill",
+                        "source": "osm2vectortiles",
+                        "source-layer": "buildings",
+                        "paint": {
+                                "fill-color": "#d9d0c9",
+				"fill-outline-color": "#B3AAA3"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "buildings-major-terminal",
+                        "minzoom": 13,
+                        "type": "fill",
+                        "source": "osm2vectortiles",
+                        "source-layer": "buildings-major",
+                        "filter": [
+                                        "==",
+                                        "aeroway",
+                                        "terminal"
+                        ],
+                        "paint": {
+                                "fill-color": "#cc99ff",
+				"fill-outline-color": "#A673D9"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "buildings-major-place_of_worship",
+                        "minzoom": 13,
+                        "type": "fill",
+                        "source": "osm2vectortiles",
+                        "source-layer": "buildings-major",
+                        "filter": [
+                                        "==",
+                                        "amenity",
+                                        "place_of_worship" 
+                        ],
+                        "paint": {
+                                "fill-color": "#A69D96",
+				"fill-outline-color": "#736A63"
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "bridge",
+                        "minzoom": 12,
+                        "type": "fill",
+                        "source": "osm2vectortiles",
+                        "source-layer": "bridge",
+                        "paint": {
+                                "fill-color": "#B8B8B8"
+                        },
+                        "interactive": true
+                },
+
+
+
+                {
+                        "id": "admin-level-2",
+			"minzoom": 4,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "admin-low-zoom",
+                        "filter": [
+                                        "==",
+                                        "admin_level",
+                                        "2"
+                        ],
+                        "line-join": "bevel",
+                        "paint": {
+					"line-width": {
+                                 		"stops": [
+                                                	[4,1.2],
+                                                	[10,6]
+	                                        ]
+					},
+	                                "line-color": "#ac46ac",
+                                	"line-opacity": 0.4
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "admin-level-3",
+                        "minzoom": 4,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "admin-low-zoom",
+                        "filter": [
+                                        "==",
+                                        "admin_level",
+                                        "3"
+                        ],
+                        "line-join": "bevel",
+                        "paint": {
+                                 	"line-width": {
+                                        	"stops": [
+                                                	[4,0.6],
+                                                	[10,4]
+	                                        ]
+                        	        },
+                                        "line-color": "#ac46ac",
+                                        "line-opacity": 0.4
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "admin-level-4",
+                        "minzoom": 4,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "admin-low-zoom",
+                        "filter": [
+                                        "==",
+                                        "admin_level",
+                                        "2"
+                        ],
+                        "line-join": "bevel",
+                        "paint": {
+                                        "line-width": {
+                                                "stops": [
+                                                        [4,0.4],
+                                                        [12,3]
+                                                ]
+                                        },
+                                        "line-color": "#ac46ac",
+                                        "line-opacity": 0.4
+                        },
+                        "interactive": true
+                },
+
+                {
+                        "id": "admin-level-5",
+                        "minzoom": 11,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "admin-low-zoom",
+                        "filter": [
+                                        "==",
+                                        "admin_level",
+                                        "5"
+                        ],
+                        "line-join": "bevel",
+                        "paint": {
+                                        "line-width": 2,
+                                        "line-color": "#ac46ac",
+                                        "line-opacity": 0.4
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "admin-level-6",
+                        "minzoom": 11,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "admin-low-zoom",
+                        "filter": [
+                                        "==",
+                                        "admin_level",
+                                        "6"
+                        ],
+                        "line-join": "bevel",
+                        "paint": {
+                                        "line-width": 2,
+                                        "line-color": "#ac46ac",
+                                        "line-opacity": 0.4
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "admin-level-7",
+                        "minzoom": 12,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "admin-low-zoom",
+                        "filter": [
+                                        "==",
+                                        "admin_level",
+                                        "7"
+                        ],
+                        "line-join": "bevel",
+                        "paint": {
+                                        "line-width": 1.5,
+                                        "line-color": "#ac46ac",
+                                        "line-opacity": 0.4
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "admin-level-8",
+                        "minzoom": 12,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "admin-low-zoom",
+                        "filter": [
+                                        "==",
+                                        "admin_level",
+                                        "8"
+                        ],
+                        "line-join": "bevel",
+                        "paint": {
+                                        "line-width": 1.5,
+                                        "line-color": "#ac46ac",
+                                        "line-opacity": 0.4
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "admin-level-9",
+                        "minzoom": 13,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "admin-low-zoom",
+                        "filter": [
+                                        "==",
+                                        "admin_level",
+                                        "9"
+                        ],
+                        "line-join": "bevel",
+                        "paint": {
+                                        "line-width": {
+                                                "stops": [
+                                                        [4,0.6],
+                                                        [10,4]
+                                                ]
+                                        },
+                                        "line-color": "#ac46ac",
+                                        "line-opacity": 0.4
+                        },
+                        "interactive": true
+                },
+                {
+                        "id": "admin-level-10",
+                        "minzoom": 13,
+                        "type": "line",
+                        "source": "osm2vectortiles",
+                        "source-layer": "admin-high-zoom",
+                        "filter": [
+                                        "==",
+                                        "admin_level",
+                                        "10"
+                        ],
+                        "line-join": "bevel",
+                        "paint": {
+                                        "line-width": 2,
+                                        "line-color": "#ac46ac",
+                                        "line-opacity": 0.4
+                        },
+                        "interactive": true
+                }
+	]
+}
