@@ -4,20 +4,35 @@ A Mapbox GL style for OpenStreetMap
 ![Screenshot](screenshot3.png "Screenshot")
 Left: Mapbox GL, Right: Openstreetmap-carto
 
-Build instructions (in a Docker container) are forthcoming to ease development. I will also release a small mbtiles using the OSM2VectorTiles project so you can nearly immediately start contributing but here's the short of it:
+All building is using a branch of the OSM2VectorTiles project. The build will follow similary to that pipeline.
 
-1) Follow the instructions here to import a compatible OSM DB: https://github.com/geofabrik/openstreetmap-carto-vector-tiles/blob/master/README_VECTOR_TILES.md
+To use the following instructions, you will need to have Docker and Docker-compose installed. You may also need to add yourself to the "docker" group to avoid having to run the docker-compose commands under sudo.
 
- Ubuntu 16.04 works, as long as you upgrade to node4.
+Building:
 
- To do so, add the following lines to /etc/apt/nodejs.list
+1) git clone -b openstreetmap-style https://github.com/osm2vectortiles/osm2vectortiles.git
+2) cd osm2vectortiles
+3) make postgis; make import-osm2pgsql; make generate-tm2source
+4) docker-compose up -d postgis
+5) Put any PBF extract you'd like into osm2vectortiles/import . Any name is acceptable. I've used small extracts like Liechtenstein from Geofabrik quite successfully
+6) docker-compose up import-osm2pgsql
+7) docker-compose up generate-tm2source
+8) Modify osm2vectortiles/docker-compose.yml and search for the line: "BBOX". Modify this line to the BBOX of your extract. As it is, it is setup for Liechtenstein
+9) docker-compose up export
+10) Wait 30s, you will have an MBTiles in the osm2vectortiles/export directory
 
- deb https://deb.nodesource.com/node_4.x xenial main
+Feel free to import different areas by placing a different PBF into the import directory and modifying the docker-compose.yml BBOX.
 
- deb-src https://deb.nodesource.com/node_4.x xenial main
+Serving:
 
- and then sudo apt-get update; sudo apt-get upgrade. Complete the openstreetmap-carto-vector-tiles instructions as described.
+This will use the tileserver-gl-light project to serve up the PBF. The actual osm-v1.json style will be hosted elsewhere however:
 
-2) Once Tessera is running, get an OpenLayers/Leaflet website up and running which can pull PBFs from Tessera. Use osm-v1.json as your style, possibly modifying the IP in the first few lines to point to your Tessera server.
+1) git clone https://github.com/stirringhalo/docker-tileserver-gl-light.git
+2) cd docker-tileserver-gl-light/tileserver-gl-light
+3) Place the osm2vectortiles/export/*.mbtiles into docker-tileserver-gl-light/tileserver-gl-light/import/
+3) docker build -t tileserver-gl-light .
+4) docker run -d -it -p 0.0.0.0:10000:8080 -v $(pwd)/import:/import tileserver-gl-light
 
-3) Start reading https://github.com/gravitystorm/openstreetmap-carto and styling away! Please generate pull-requests with your additions!
+Website:
+
+
