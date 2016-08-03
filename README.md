@@ -1,7 +1,8 @@
 # openstreetmap-mapboxgl
 A Mapbox GL style for OpenStreetMap
 
-![Screenshot](screenshot2.png "Screenshot")
+![Screenshot](screenshot3.png "Screenshot")
+Left: Mapbox GL, Right: Openstreetmap-carto
 
 Build instructions (in a Docker container) are forthcoming to ease development. I will also release a small mbtiles using the OSM2VectorTiles project so you can nearly immediately start contributing but here's the short of it:
 
