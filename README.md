@@ -24,7 +24,7 @@ To use the following instructions, you will need to have Docker and Docker-compo
 9. docker-compose up export
 10. Wait 30s, you will have an MBTiles in the osm2vectortiles/export directory
 
-Feel free to import different areas by placing a different PBF into the import directory and modifying the docker-compose.yml BBOX.
+Feel free to import different areas by placing a different PBF into the import directory and modifying the docker-compose.yml BBOX. The export-worker approach for large exports across a cluster should work fine but is currently untested.
 
 ## Serving:
 
