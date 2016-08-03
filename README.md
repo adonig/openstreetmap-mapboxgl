@@ -8,31 +8,29 @@ All building is using a branch of the OSM2VectorTiles project. The build will fo
 
 To use the following instructions, you will need to have Docker and Docker-compose installed. You may also need to add yourself to the "docker" group to avoid having to run the docker-compose commands under sudo.
 
-Building:
+## Building:
 
-1) git clone -b openstreetmap-style https://github.com/osm2vectortiles/osm2vectortiles.git
-2) cd osm2vectortiles
-3) make postgis; make import-osm2pgsql; make generate-tm2source
-4) docker-compose up -d postgis
-5) Put any PBF extract you'd like into osm2vectortiles/import . Any name is acceptable. I've used small extracts like Liechtenstein from Geofabrik quite successfully
-6) docker-compose up import-osm2pgsql
-7) docker-compose up generate-tm2source
-8) Modify osm2vectortiles/docker-compose.yml and search for the line: "BBOX". Modify this line to the BBOX of your extract. As it is, it is setup for Liechtenstein
-9) docker-compose up export
-10) Wait 30s, you will have an MBTiles in the osm2vectortiles/export directory
+1. git clone -b openstreetmap-style https://github.com/osm2vectortiles/osm2vectortiles.git
+2. cd osm2vectortiles
+3. make postgis; make import-osm2pgsql; make generate-tm2source
+4. docker-compose up -d postgis
+5. Put any PBF extract you'd like into osm2vectortiles/import . Any name is acceptable. I've used small extracts like Liechtenstein from Geofabrik quite successfully
+6. docker-compose up import-osm2pgsql
+7. docker-compose up generate-tm2source
+8. Modify osm2vectortiles/docker-compose.yml and search for the line: "BBOX". Modify this line to the BBOX of your extract. As it is, it is setup for Liechtenstein
+9. docker-compose up export
+10. Wait 30s, you will have an MBTiles in the osm2vectortiles/export directory
 
 Feel free to import different areas by placing a different PBF into the import directory and modifying the docker-compose.yml BBOX.
 
-Serving:
+## Serving:
 
 This will use the tileserver-gl-light project to serve up the PBF. The actual osm-v1.json style will be hosted elsewhere however:
 
-1) git clone https://github.com/stirringhalo/docker-tileserver-gl-light.git
-2) cd docker-tileserver-gl-light/tileserver-gl-light
-3) Place the osm2vectortiles/export/*.mbtiles into docker-tileserver-gl-light/tileserver-gl-light/import/
-3) docker build -t tileserver-gl-light .
-4) docker run -d -it -p 0.0.0.0:10000:8080 -v $(pwd)/import:/import tileserver-gl-light
-
-Website:
+1. git clone https://github.com/stirringhalo/docker-tileserver-gl-light.git
+2. cd docker-tileserver-gl-light/tileserver-gl-light
+3. Place the osm2vectortiles/export/*.mbtiles into docker-tileserver-gl-light/tileserver-gl-light/import/
+4. docker build -t tileserver-gl-light .
+5. docker run -d -it -p 0.0.0.0:10000:8080 -v $(pwd)/import:/import tileserver-gl-light
 
 
