@@ -1,5 +1,4 @@
 # openstreetmap-mapboxgl
-A Mapbox GL style for OpenStreetMap
 
 The goal of this project isn't to be a 1-to-1 replacement for openstreetmap-carto. However, this project is aimed at making a style similar to openstreetmap-carto using the same tileschema. The focus here is clarity and simplicity without necessarily showing all the attributes that openstreetmap-carto does.
 
