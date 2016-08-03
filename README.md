@@ -15,7 +15,7 @@ To use the following instructions, you will need to have Docker and Docker-compo
 
 1. git clone -b openstreetmap-style https://github.com/osm2vectortiles/osm2vectortiles.git
 2. cd osm2vectortiles
-3. make postgis; make import-osm2pgsql; make generate-tm2source
+3. make postgis; make import-osm2pgsql; make generate-tm2source; make export-mbtiles
 4. docker-compose up -d postgis
 5. Put any PBF extract you'd like into osm2vectortiles/import . Any name is acceptable. I've used small extracts like Liechtenstein from Geofabrik quite successfully
 6. docker-compose up import-osm2pgsql
