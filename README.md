@@ -1,6 +1,6 @@
 # openstreetmap-mapboxgl
 
-This project uses the (MapboxGL)[https://github.com/mapbox/mapbox-gl] library with the tile schema of openstreetmap-carto. A new style has been composed to suit.
+This project uses the [MapboxGL](https://github.com/mapbox/mapbox-gl) library with the tile schema of openstreetmap-carto. A new style has been composed to suit.
 
 The goal of this project isn't to be a 1-to-1 replacement for openstreetmap-carto. However, this project is aimed at making a style similar to openstreetmap-carto using the same tileschema. The focus here is clarity and simplicity without necessarily showing all the attributes that openstreetmap-carto does.
 
