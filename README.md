@@ -1,5 +1,7 @@
 # openstreetmap-mapboxgl
 
+This project uses the (MapboxGL)[https://github.com/mapbox/mapbox-gl] library with the tile schema of openstreetmap-carto. A new style has been composed to suit.
+
 The goal of this project isn't to be a 1-to-1 replacement for openstreetmap-carto. However, this project is aimed at making a style similar to openstreetmap-carto using the same tileschema. The focus here is clarity and simplicity without necessarily showing all the attributes that openstreetmap-carto does.
 
 #### If you have an issue with the openstreetmap-carto branch, please raise it here as to avoid confusing the main OSM2VectorTiles issues page.
@@ -28,7 +30,7 @@ Feel free to import different areas by placing a different PBF into the import d
 
 ## Serving:
 
-This will use the tileserver-gl-light project to serve up the PBF. The actual osm-v1.json style will be hosted elsewhere however:
+This will use the tileserver-gl-light project to serve up the PBF. The actual osm-v1.json style will be hosted with a different webserver however:
 
 1. git clone https://github.com/stirringhalo/docker-tileserver-gl-light.git
 2. cd docker-tileserver-gl-light/tileserver-gl-light
