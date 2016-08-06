@@ -1,5 +1,7 @@
 # openstreetmap-mapboxgl
 
+[Demo](http://45.56.99.211/). This uses tweaked https://github.com/erikandre/mapbox-gl-style-editor and the original OpenSteetMap is © OpenStreetMap contributors
+
 This project uses the [MapboxGL](https://github.com/mapbox/mapbox-gl) library with the tile schema of openstreetmap-carto. A new style has been composed to suit.
 
 The goal of this project isn't to be a 1-to-1 replacement for openstreetmap-carto. However, this project is aimed at making a style similar to openstreetmap-carto using the same tileschema. The focus here is clarity and simplicity without necessarily showing all the attributes that openstreetmap-carto does.
@@ -37,5 +39,3 @@ This will use the tileserver-gl-light project to serve up the PBF. The actual os
 3. Place the osm2vectortiles/export/*.mbtiles into docker-tileserver-gl-light/tileserver-gl-light/import/
 4. docker build -t tileserver-gl-light .
 5. docker run -d -it -p 0.0.0.0:10000:8080 -v $(pwd)/import:/import tileserver-gl-light
-
-
