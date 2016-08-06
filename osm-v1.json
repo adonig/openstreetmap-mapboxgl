@@ -3,7 +3,7 @@
 	"name": "osm",
 	"sources": {
 		"osm2vectortiles": {
-			"tiles": ["http://127.0.0.1:8080/pbfs/live/{z}/{x}/{y}.pbf"],
+			"tiles": ["http://127.0.0.1:8080/data/osm2vectortiles/{z}/{x}/{y}.pbf"],
 			"type": "vector"
 		}
 	},
