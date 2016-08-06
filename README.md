@@ -1,10 +1,4 @@
-# openstreetmap-mapboxgl
-
-[Demo](http://45.56.99.211/)! This uses tweaked https://github.com/erikandre/mapbox-gl-style-editor and the underlying OpenStreetMap is [© OpenStreetMap contributors](http://www.openstreetmap.org/copyright).
-
-To modify the style, edit in the right editor bar and while the cursor is in the editor bar, press "Ctrl+S". The map will update to reflect your style (or show your syntax error). Then, copy the style from the browser and generate a pull request with your modified style! I will soon have it auto grab the latest style on pushes!
-
---
+# openstreetmap-mapboxgl ([Demo](http://45.56.99.211/))!
 
 This project uses the [MapboxGL](https://github.com/mapbox/mapbox-gl) library with the tile schema of openstreetmap-carto. A new style has been composed to suit.
 
