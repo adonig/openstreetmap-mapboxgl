@@ -1,6 +1,6 @@
 # openstreetmap-mapboxgl
 
-[Demo](http://45.56.99.211/). This uses tweaked https://github.com/erikandre/mapbox-gl-style-editor and the original OpenSteetMap is © OpenStreetMap contributors
+[Demo](http://45.56.99.211/)! This uses tweaked https://github.com/erikandre/mapbox-gl-style-editor and the original OpenSteetMap is © OpenStreetMap contributors
 
 This project uses the [MapboxGL](https://github.com/mapbox/mapbox-gl) library with the tile schema of openstreetmap-carto. A new style has been composed to suit.
 
