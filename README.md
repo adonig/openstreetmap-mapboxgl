@@ -1,6 +1,6 @@
 # openstreetmap-mapboxgl
 
-[Demo](http://45.56.99.211/)! This uses tweaked https://github.com/erikandre/mapbox-gl-style-editor and the original OpenSteetMap is © OpenStreetMap contributors.
+[Demo](http://45.56.99.211/)! This uses tweaked https://github.com/erikandre/mapbox-gl-style-editor and the original [OpenSteetMap is © OpenStreetMap contributors](http://www.openstreetmap.org/copyright).
 
 To modify the style, edit the left tool bar and while the cursor is in the editor bar, press "Ctrl+S". Then, copy the style from the browser, generate a pull request with the style from the demo! I will soon have it auto grab the latest style on pushes!
 
