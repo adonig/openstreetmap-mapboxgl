@@ -1,1878 +1,2157 @@
 {
-	"version": 8,
-	"name": "osm",
-	"sources": {
-		"osm2vectortiles": {
-			"tiles": ["http://127.0.0.1:8080/data/osm2vectortiles/{z}/{x}/{y}.pbf"],
-			"type": "vector"
-		}
-	},
-	"layers": [
-		{
-			"id": "background",
-			"type": "background",
-			"paint": {
-				"background-color": "#b5d0d0"
-			}
-		},
-                {
-                        "id": "necountries",
-                        "minzoom": 1,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "necountries",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [1,0.2],
-                                                [3,0.4]
-                                        ]
-                                },
-                                "line-color": "#ac46ac"
-                        },
-                        "interactive": true
-                },
-		{
-			"id": "world",
-			"maxzoom": 9,
-			"type": "fill",
-			"source": "osm2vectortiles",
-			"source-layer": "world",
-			"paint": {
-				"fill-color": "#f2efe9"
-			},
-			"interactive": true
-		},
-                {
-                        "id": "coast-poly",
-			"minzoom": 10,
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "coast-poly",
-                        "paint": {
-                                "fill-color": "#f2efe9"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "icesheet-poly",
-			"minzoom": 6,
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "icesheet-poly",
-                        "paint": {
-                                "fill-color": "#ddecec"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "icesheet-outlines",
-                        "minzoom": 6,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "icesheet-outlines",
-			"filter": [
-					"in",
-					"ice_edge",
-					"ice_ocean",
-					"ice_land"
-			],
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [6,0.375],
-                                                [10,0.75]
-                                        ]
-                                },
-                                "line-color": "#9cf"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "builtup",
-                        "minzoom": 8,
-			"maxzoom": 9,
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "builtup",
-                        "paint": {
-                                "fill-color": "#ddd"
-                        },
-                        "interactive": true
-                },
-
-
-
-                {
-                        "id": "landcover-wood-forest",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "landuse_forest",
-					"natural_wood"
-                        ],
-                        "paint": {
-                                "fill-color": "#add19e"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-grasses",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "landuse_meadow",
-                                        "natural_grassland",
-					"landuse_grass",
-					"landuse_recreation_ground",
-					"landuse_village_green",
-					"leisure_common",
-					"leisure_garden"
-                        ],
-                        "paint": {
-                                "fill-color": "#cdebb0"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-scrub",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "natural_scrub"
-                        ],
-                        "paint": {
-                                "fill-color": "#b5e3b5"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-park",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "leisure_park",
-					"leisure_recreation_ground",
-					"leisure_dog_park"
-                        ],
-                        "paint": {
-                                "fill-color": "#c8facc"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-orchard",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "leisure_vineyard",
-                                        "leisure_orchard"
-                        ],
-                        "paint": {
-                                "fill-color": "#aedfa3"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-residential",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "landuse_residential"
-                        ],
-                        "paint": {
-                                "fill-color": "#e0dfdf",
-				"fill-outline-color": "#B9B9B9"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-retail",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "landuse_retail"
-                        ],
-                        "paint": {
-                                "fill-color": "#FFD6D1",
-                                "fill-outline-color": "#D99C95"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-commercial",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "landuse_commercial"
-                        ],
-                        "paint": {
-                                "fill-color": "#F2DAD9",
-                                "fill-outline-color": "#D1B2B0"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-industrial",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "landuse_industrial",
-					"landuse_railway"
-                        ],
-                        "paint": {
-                                "fill-color": "#EBDBE8",
-                                "fill-outline-color": "#C6B3C3"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-farmland",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "landuse_farm",
-                                        "landuse_farmland",
-					"landuse_greenhouse_horticulture"
-                        ],
-                        "paint": {
-                                "fill-color": "#fbecd7",
-                                "fill-outline-color": "#d6c4ab"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-farmyard",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "landuse_yard"
-                        ],
-                        "paint": {
-                                "fill-color": "#EFD6B5",
-                                "fill-outline-color": "#D1B48C"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-aerodrome",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "aeroway_aerodrome"
-                        ],
-                        "paint": {
-                                "fill-color": "#e9e7e2"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-allotments",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "landuse_allotments"
-                        ],
-                        "paint": {
-                                "fill-color": "#e5c7ab"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-apron",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "aeroway_apron"
-                        ],
-                        "paint": {
-                                "fill-color": "#e9d1ff"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-bare_ground",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "natural_bare_rock",
-					"natural_scree",
-					"natural_shinkgle"
-                        ],
-                        "paint": {
-                                "fill-color": "#eee5dc"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-campsite",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "tourism_camp_site",
-                                        "tourism_caravan_site",
-                                        "tourism_picnic_site"
-                        ],
-                        "paint": {
-                                "fill-color": "#def6c0"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-cemetery",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "landuse_cemetery",
-                                        "landuse_grave_yard"
-                        ],
-                        "paint": {
-                                "fill-color": "#aacbaf"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-construction",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "landuse_brownfield",
-                                        "landuse_landfill",
-					"landuse_construction"
-                        ],
-                        "paint": {
-                                "fill-color": "#b6b592"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-danger_area",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "military_danger_area"
-                        ],
-                        "paint": {
-                                "fill-color": "pink",
-				"fill-opacity": 0.3
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-garages",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "landuse_garages"
-                        ],
-                        "paint": {
-                                "fill-color": "#dfddce"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-heath",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "wetland_bog",
-                                        "wetland_string_bog",
-                                        "natural_heath"
-                        ],
-                        "paint": {
-                                "fill-color": "#d6d99f"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-mud",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "wetland_mud",
-                                        "wetland_tidalflat"
-                        ],
-                        "paint": {
-                                "fill-color": "rgba(203,177,154,0.3)"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-parking",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "amenity_parking",
-                                        "amenity_bicycle_parking",
-					"amenity_motorcycle_parking"
-                        ],
-                        "paint": {
-                                "fill-color": "#f7efb7"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-place_of_worship",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "amenity_place_of_worship"
-                        ],
-                        "paint": {
-                                "fill-color": "#cdccc9",
-				"fill-outline-color": "#111"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-playground",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "leisure_playground"
-                        ],
-                        "paint": {
-                                "fill-color": "#ccfff1"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-rest_area",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "highway_services",
-					"highway_rest_area"
-                        ],
-                        "paint": {
-                                "fill-color": "#efc8c8"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-sand",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "natural_sand"
-                        ],
-                        "paint": {
-                                "fill-color": "#f5e9c6"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-societal_amenities",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "amenity_hospital",
-                                        "amenity_university",
-                                        "amenity_college",
-                                        "amenity_school",
-                                        "amenity_kindergarten"
-                        ],
-                        "paint": {
-                                "fill-color": "#f0f0d8"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-station",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "railway_station"
-                        ],
-                        "paint": {
-                                "fill-color": "#d4aaaa"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-quarry",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "landuse_quarry" 
-                        ],
-                        "paint": {
-                                "fill-color": "#c5c3c3"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-military",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landuse_overlay",
-                        "filter": [
-                                        "==",
-                                        "landuse",
-                                        "military" 
-                        ],
-                        "paint": {
-                                "fill-color": "#f55",
-				"fill-opacity": 0.3
-                        },
-                        "interactive": true
-                },
-		{
-                        "id": "landcover-beach",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "natural_beach",
-					"natural_shoal"
-                        ],
-                        "paint": {
-                                "fill-color": "#fff1ba"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-pitch",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "leisure_pitch"
-                        ],
-                        "paint": {
-                                "fill-color": "#80d7b5"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-track",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "leisure_track" 
-                        ],
-                        "paint": {
-                                "fill-color": "#80d7b5"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-stadium",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "leisure_sports_centre",
-					"leisure_stadium"
-                        ],
-                        "paint": {
-                                "fill-color": "#f0f0d8"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "landcover-golf_course",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "landcover",
-                        "filter": [
-                                        "in",
-                                        "feature",
-                                        "leisure_golf_course",
-                                        "leisure_miniature_golf"
-                        ],
-                        "paint": {
-                                "fill-color": "#b5e3b5"
-                        },
-                        "interactive": true
-                },
-
-
-
-                {
-                        "id": "water-glacier",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "water-areas",
-                        "filter": [
-                                        "==",
-                                        "natural",
-                                        "glacier"
-                        ],
-                        "paint": {
-                                "fill-color": "#ddecec",
-				"fill-outline-color": "#9cf"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "water-dock-canal",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "water-areas",
-                        "filter": [
-                                        "in",
-                                        "waterway",
-                                        "dock",
-					"canal"
-                        ],
-                        "paint": {
-                                "fill-color": "#b5d0d0"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "water-basin",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "water-areas",
-                        "filter": [
-                                        "==",
-                                        "landuse",
-                                        "basin"
-                        ],
-                        "paint": {
-                                "fill-color": "#b5d0d0"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "water-water",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "water-areas",
-                        "filter": [
-                                        "==",
-                                        "natural",
-                                        "water" 
-                        ],
-                        "paint": {
-                                "fill-color": "#b5d0d0"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "water-reservoir",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "water-areas",
-                        "filter": [
-                                        "==",
-                                        "landuse",
-                                        "reservoir" 
-                        ],
-                        "paint": {
-                                "fill-color": "#b5d0d0"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "water-riverbank",
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "water-areas",
-                        "filter": [
-                                        "==",
-                                        "waterway",
-                                        "riverbank" 
-                        ],
-                        "paint": {
-                                "fill-color": "#b5d0d0"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "water-stream-ditch-drain-casing",
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "water-lines-casing",
-                        "filter": [
-                                        "in",
-                                        "waterway",
-                                        "stream",
-					"ditch",
-					"drain"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,1.25],
-                                                [15,1.75]
-                                        ]
-                                },
-                                "line-color": "white"
-                        },
-
-                        "interactive": true
-                },
-                {
-                        "id": "water-river-low-zoom",
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "water-lines-low-zoom",
-			"minzoom": 8,
-			"maxzoom": 11,
-                        "filter": [
-                                        "==",
-                                        "waterway",
-                                        "river"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [9,0.6],
-                                                [10,0.8]
-                                        ]
-                                },
-                                "line-color": "#b5d0d0"
-                        },
-
-                        "interactive": true
-                },
-                {
-                        "id": "water-canal-river-wadi",
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "water-lines",
-			"minzoom": 12,
-                        "filter": [
-                                        "in",
-                                        "waterway",
-					"canal",
-                                        "river",
-					"wadi"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-						[12,1],
-                                                [18,6]
-                                        ]
-                                },
-                                "line-color": "#b5d0d0"
-                        },
-
-                        "interactive": true
-                },
-                {
-                        "id": "water-stream-ditch-drain",
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "water-lines",
-                        "minzoom": 13,
-                        "filter": [
-                                        "in",
-                                        "waterway",
-                                        "stream",
-                                        "ditch",
-                                        "drain"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,1],
-                                                [18,2.5] 
-                                        ]
-                                },
-                                "line-color": "#b5d0d0"
-                        },
-
-                        "interactive": true
-                },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                {
-                        "id": "highway-motorway-casing",
-                        "minzoom": 5,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_motorway"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [5,0.25],
-                                                [19,14.5]
-                                        ]
-                                },
-                                "line-color": "#dc2a67"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-motorway-fill",
-                        "minzoom": 5,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-fill",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_motorway"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [5,0.2],
-                                                [19,13.5]
-                                        ]
-                                },
-                                "line-color": "#e892a2"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-trunk-casing",
-                        "minzoom": 5,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_trunk"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [5,0.2],
-                                                [19,14.5]
-                                        ]
-                                },
-                                "line-color": "#c84e2f"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-trunk-fill",
-                        "minzoom": 5,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-fill",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_motorway"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [5,1.5],
-                                                [19,13.5]
-                                        ]
-                                },
-                                "line-color": "#f9b29c"
-                        },
-                        "interactive": true
-                },
-
-                {
-                        "id": "highway-primary-casing",
-                        "minzoom": 8,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_primary"
-                        ],
-                        "line-join": "round",
-			"line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [8,0.5],
-                                                [19,14.5]
-                                        ]
-                                },
-                                "line-color": "#B88B35"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-primary-fill",
-                        "minzoom": 8,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-fill",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_primary"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [8,0.25],
-                                                [19,13.5]
-                                        ]
-                                },
-                                "line-color": "#FCD6A4"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-secondary-casing",
-                        "minzoom": 9,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_secondary"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [9,0.5],
-                                                [19,14.5]
-                                        ]
-                                },
-                                "line-color": "#707d05"
-                        },
-                        "interactive": true
-               },
-               {
-                        "id": "highway-secondary-fill",
-                        "minzoom": 9,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-fill",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_secondary"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [9,0.25],
-                                                [19,13.5]
-                                        ]
-                                },
-                                "line-color": "#F6F9BE"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-tertiary-casing",
-                        "minzoom": 12,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_tertiary"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [12,1.65],
-                                                [19,14.5]
-                                        ]
-                                },
-                                "line-color": "#8f8f8f"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-tertiary-fill",
-                        "minzoom": 12,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-fill",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_tertiary"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [12,1],
-                                                [19,13.5]
-                                        ]
-                                },
-                                "line-color": "#ffffff"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-residential-casing",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_residential"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,1.5],
-                                                [19,12.5]
-                                        ]
-                                },
-                                "line-color": "#bbb"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-residential-fill",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-fill",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_residential"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,1.25],
-                                                [19,12]
-                                        ]
-                                },
-                                "line-color": "#ffffff"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-service-casing",
-                        "minzoom": 14,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_service"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [14,0.5],
-                                                [19,5.5]
-                                        ]
-                                },
-                                "line-color": "#bbb"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-service-fill",
-                        "minzoom": 14,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-fill",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_service"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [14,0.25],
-                                                [19,4.5]
-                                        ]
-                                },
-                                "line-color": "#ffffff"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-living-street-casing",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_living_street"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,1.6],
-                                                [19,8.5]
-                                        ]
-                                },
-                                "line-color": "#bbb"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-living-street-fill",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_living_street"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,1.25],
-                                                [19,8]
-                                        ]
-                                },
-                                "line-color": "#ededed"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-pedestrian-casing",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_pedestrian"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,1],
-                                                [19,8.25]
-                                        ]
-                                },
-                                "line-color": "#999"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-pedestrian-fill",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_pedestrian"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,0.5],
-                                                [19,7.5]
-                                        ]
-                                },
-                                "line-color": "#dddde8"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-road-casing",
-                        "minzoom": 14,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_road"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [14,1],
-                                                [19,8.25]
-                                        ]
-                                },
-                                "line-color": "#bbb"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-road-fill",
-                        "minzoom": 14,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_road"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [14,0.5],
-                                                [19,7.5]
-                                        ]
-                                },
-                                "line-color": "#ddd"
-                        },
-                        "interactive": true
-                },
-
-
-
-                {
-                        "id": "highway-unclassified-casing",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_unclassified"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,1],
-                                                [19,8.25]
-                                        ]
-                                },
-                                "line-color": "#bbb"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-unclassified-fill",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_unclassified"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,0.5],
-                                                [19,7.5]
-                                        ]
-                                },
-                                "line-color": "#ffffff"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-steps",
-                        "minzoom": 15,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_steps"
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,1],
-                                                [15,5]
-                                        ]
-                                },
-                                "line-color": "salmon",
-				"line-dasharray":  [0.5,0.25]
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-bridleway",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "any",
-                                        ["==","feature","highway_bridleway"],
-                                        ["all", ["==","feature","highway_path"], ["==","horse","designated"]]
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,0.3],
-                                                [15,1.2]
-                                        ]
-                                },
-                                "line-color": "green",
-                                "line-dasharray":  [2,2]
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-footway",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "any",
-                                        ["==","feature","highway_footway"],
-                                        ["all", ["==","feature","highway_path"], ["!=","bicycle","designated"],["!=","horse","designated"]]
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,0.3],
-                                                [15,1.2]
-                                        ]
-                                },
-                                "line-color": "salmon",
-                                "line-dasharray":  [2,2]
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-cycleway",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-					"any",
-                                        ["==","feature","highway_cycleway"],
-					["all", ["==","feature","highway_path"], ["==","bicycle","designated"]]
-			],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,0.3],
-                                                [15,1.2]
-                                        ]
-                                },
-                                "line-color": "blue",
-                                "line-dasharray":  [2,2]
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "highway-track",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "roads-casing",
-                        "filter": [
-                                        "==",
-                                        "feature",
-                                        "highway_track" 
-                        ],
-                        "line-join": "round",
-                        "line-cap": "round",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [13,0.3],
-                                                [15,1.2]
-                                        ]
-                                },
-                                "line-color": "#996600",
-                                "line-dasharray":  [3,3]
-                        },
-                        "interactive": true
-                },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                {
-                        "id": "power-line",
-                        "minzoom": 14,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "power-line",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [14,0.5],
-                                                [19,1.2]
-                                        ]
-                                },
-                                "line-color": "#888"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "power-minorline",
-                        "minzoom": 16,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "power-minorline",
-                        "paint": {
-                                "line-width": {
-                                        "stops": [
-                                                [16,0.3],
-                                                [18,0.5]
-                                        ]
-                                },
-                                "line-color": "#888"
-                        },
-                        "interactive": true
-                },
-
-
-
-                {
-                        "id": "buildings",
-                        "minzoom": 13,
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "buildings",
-                        "paint": {
-                                "fill-color": "#d9d0c9",
-				"fill-outline-color": "#B3AAA3"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "buildings-major-terminal",
-                        "minzoom": 13,
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "buildings-major",
-                        "filter": [
-                                        "==",
-                                        "aeroway",
-                                        "terminal"
-                        ],
-                        "paint": {
-                                "fill-color": "#cc99ff",
-				"fill-outline-color": "#A673D9"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "buildings-major-place_of_worship",
-                        "minzoom": 13,
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "buildings-major",
-                        "filter": [
-                                        "==",
-                                        "amenity",
-                                        "place_of_worship" 
-                        ],
-                        "paint": {
-                                "fill-color": "#A69D96",
-				"fill-outline-color": "#736A63"
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "bridge",
-                        "minzoom": 12,
-                        "type": "fill",
-                        "source": "osm2vectortiles",
-                        "source-layer": "bridge",
-                        "paint": {
-                                "fill-color": "#B8B8B8"
-                        },
-                        "interactive": true
-                },
-
-
-
-                {
-                        "id": "admin-level-2",
-			"minzoom": 4,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "admin-low-zoom",
-                        "filter": [
-                                        "==",
-                                        "admin_level",
-                                        "2"
-                        ],
-                        "line-join": "bevel",
-                        "paint": {
-					"line-width": {
-                                 		"stops": [
-                                                	[4,1.2],
-                                                	[10,6]
-	                                        ]
-					},
-	                                "line-color": "#ac46ac",
-                                	"line-opacity": 0.4
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "admin-level-3",
-                        "minzoom": 4,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "admin-low-zoom",
-                        "filter": [
-                                        "==",
-                                        "admin_level",
-                                        "3"
-                        ],
-                        "line-join": "bevel",
-                        "paint": {
-                                 	"line-width": {
-                                        	"stops": [
-                                                	[4,0.6],
-                                                	[10,4]
-	                                        ]
-                        	        },
-                                        "line-color": "#ac46ac",
-                                        "line-opacity": 0.4,
-					"line-dasharray": [4,2]
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "admin-level-4",
-                        "minzoom": 4,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "admin-low-zoom",
-                        "filter": [
-                                        "==",
-                                        "admin_level",
-                                        "2"
-                        ],
-                        "line-join": "bevel",
-                        "paint": {
-                                        "line-width": {
-                                                "stops": [
-                                                        [4,0.4],
-                                                        [12,3]
-                                                ]
-                                        },
-                                        "line-color": "#ac46ac",
-                                        "line-opacity": 0.4,
-                                        "line-dasharray": [4,3]
-                        },
-                        "interactive": true
-                },
-
-                {
-                        "id": "admin-level-5",
-                        "minzoom": 11,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "admin-low-zoom",
-                        "filter": [
-                                        "==",
-                                        "admin_level",
-                                        "5"
-                        ],
-                        "line-join": "bevel",
-                        "paint": {
-                                        "line-width": 2,
-                                        "line-color": "#ac46ac",
-                                        "line-opacity": 0.4,
-                                        "line-dasharray": [6,3,2,3,2,3]
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "admin-level-6",
-                        "minzoom": 11,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "admin-low-zoom",
-                        "filter": [
-                                        "==",
-                                        "admin_level",
-                                        "6"
-                        ],
-                        "line-join": "bevel",
-                        "paint": {
-                                        "line-width": 2,
-                                        "line-color": "#ac46ac",
-                                        "line-opacity": 0.4,
-                                        "line-dasharray": [6,3,2,3]
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "admin-level-7",
-                        "minzoom": 12,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "admin-low-zoom",
-                        "filter": [
-                                        "==",
-                                        "admin_level",
-                                        "7"
-                        ],
-                        "line-join": "bevel",
-                        "paint": {
-                                        "line-width": 1.5,
-                                        "line-color": "#ac46ac",
-                                        "line-opacity": 0.4,
-                                        "line-dasharray": [5,2]
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "admin-level-8",
-                        "minzoom": 12,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "admin-low-zoom",
-                        "filter": [
-                                        "==",
-                                        "admin_level",
-                                        "8"
-                        ],
-                        "line-join": "bevel",
-                        "paint": {
-                                        "line-width": 1.5,
-                                        "line-color": "#ac46ac",
-                                        "line-opacity": 0.4,
-                                        "line-dasharray": [5,2]
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "admin-level-9",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "admin-low-zoom",
-                        "filter": [
-                                        "==",
-                                        "admin_level",
-                                        "9"
-                        ],
-                        "line-join": "bevel",
-                        "paint": {
-                                        "line-width": {
-                                                "stops": [
-                                                        [4,0.6],
-                                                        [10,4]
-                                                ]
-                                        },
-                                        "line-color": "#ac46ac",
-                                        "line-opacity": 0.4,
-                                        "line-dasharray": [2,3]
-                        },
-                        "interactive": true
-                },
-                {
-                        "id": "admin-level-10",
-                        "minzoom": 13,
-                        "type": "line",
-                        "source": "osm2vectortiles",
-                        "source-layer": "admin-high-zoom",
-                        "filter": [
-                                        "==",
-                                        "admin_level",
-                                        "10"
-                        ],
-                        "line-join": "bevel",
-                        "paint": {
-                                        "line-width": 2,
-                                        "line-color": "#ac46ac",
-                                        "line-opacity": 0.4,
-                                        "line-dasharray": [2,3]
-                        },
-                        "interactive": true
-                }
-	]
+   "version": 8,
+   "name": "osm",
+   "sources": {
+      "osm2vectortiles": {
+         "tiles": [
+            "http://127.0.0.1:19090/data/osm2vectortiles/{z}/{x}/{y}.pbf"
+         ],
+         "type": "vector"
+      }
+   },
+   "layers": [
+      {
+         "id": "background",
+         "type": "background",
+         "paint": {
+            "background-color": "#b5d0d0"
+         }
+      },
+      {
+         "id": "necountries",
+         "minzoom": 1,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "necountries",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     1,
+                     0.2
+                  ],
+                  [
+                     3,
+                     0.4
+                  ]
+               ]
+            },
+            "line-color": "#ac46ac"
+         },
+         "interactive": true
+      },
+      {
+         "id": "world",
+         "maxzoom": 9,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "world",
+         "paint": {
+            "fill-color": "#f2efe9"
+         },
+         "interactive": true
+      },
+      {
+         "id": "coast-poly",
+         "minzoom": 10,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "coast-poly",
+         "paint": {
+            "fill-color": "#f2efe9"
+         },
+         "interactive": true
+      },
+      {
+         "id": "icesheet-poly",
+         "minzoom": 6,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "icesheet-poly",
+         "paint": {
+            "fill-color": "#ddecec"
+         },
+         "interactive": true
+      },
+      {
+         "id": "icesheet-outlines",
+         "minzoom": 6,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "icesheet-outlines",
+         "filter": [
+            "in",
+            "ice_edge",
+            "ice_ocean",
+            "ice_land"
+         ],
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     6,
+                     0.375
+                  ],
+                  [
+                     10,
+                     0.75
+                  ]
+               ]
+            },
+            "line-color": "#9cf"
+         },
+         "interactive": true
+      },
+      {
+         "id": "builtup",
+         "minzoom": 8,
+         "maxzoom": 9,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "builtup",
+         "paint": {
+            "fill-color": "#ddd"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-wood-forest",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "landuse_forest",
+            "natural_wood"
+         ],
+         "paint": {
+            "fill-color": "#add19e"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-grasses",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "landuse_meadow",
+            "natural_grassland",
+            "landuse_grass",
+            "landuse_recreation_ground",
+            "landuse_village_green",
+            "leisure_common",
+            "leisure_garden"
+         ],
+         "paint": {
+            "fill-color": "#cdebb0"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-scrub",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "natural_scrub"
+         ],
+         "paint": {
+            "fill-color": "#b5e3b5"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-park",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "leisure_park",
+            "leisure_recreation_ground",
+            "leisure_dog_park"
+         ],
+         "paint": {
+            "fill-color": "#c8facc"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-orchard",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "leisure_vineyard",
+            "leisure_orchard"
+         ],
+         "paint": {
+            "fill-color": "#aedfa3"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-residential",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "landuse_residential"
+         ],
+         "paint": {
+            "fill-color": "#e0dfdf",
+            "fill-outline-color": "#B9B9B9"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-retail",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "landuse_retail"
+         ],
+         "paint": {
+            "fill-color": "#FFD6D1",
+            "fill-outline-color": "#D99C95"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-commercial",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "landuse_commercial"
+         ],
+         "paint": {
+            "fill-color": "#F2DAD9",
+            "fill-outline-color": "#D1B2B0"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-industrial",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "landuse_industrial",
+            "landuse_railway"
+         ],
+         "paint": {
+            "fill-color": "#EBDBE8",
+            "fill-outline-color": "#C6B3C3"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-farmland",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "landuse_farm",
+            "landuse_farmland",
+            "landuse_greenhouse_horticulture"
+         ],
+         "paint": {
+            "fill-color": "#fbecd7",
+            "fill-outline-color": "#d6c4ab"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-farmyard",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "landuse_yard"
+         ],
+         "paint": {
+            "fill-color": "#EFD6B5",
+            "fill-outline-color": "#D1B48C"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-aerodrome",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "aeroway_aerodrome"
+         ],
+         "paint": {
+            "fill-color": "#e9e7e2"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-allotments",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "landuse_allotments"
+         ],
+         "paint": {
+            "fill-color": "#e5c7ab"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-apron",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "aeroway_apron"
+         ],
+         "paint": {
+            "fill-color": "#e9d1ff"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-bare_ground",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "natural_bare_rock",
+            "natural_scree",
+            "natural_shinkgle"
+         ],
+         "paint": {
+            "fill-color": "#eee5dc"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-campsite",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "tourism_camp_site",
+            "tourism_caravan_site",
+            "tourism_picnic_site"
+         ],
+         "paint": {
+            "fill-color": "#def6c0"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-cemetery",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "landuse_cemetery",
+            "landuse_grave_yard"
+         ],
+         "paint": {
+            "fill-color": "#aacbaf"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-construction",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "landuse_brownfield",
+            "landuse_landfill",
+            "landuse_construction"
+         ],
+         "paint": {
+            "fill-color": "#b6b592"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-danger_area",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "military_danger_area"
+         ],
+         "paint": {
+            "fill-color": "pink",
+            "fill-opacity": 0.3
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-garages",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "landuse_garages"
+         ],
+         "paint": {
+            "fill-color": "#dfddce"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-heath",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "wetland_bog",
+            "wetland_string_bog",
+            "natural_heath"
+         ],
+         "paint": {
+            "fill-color": "#d6d99f"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-mud",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "wetland_mud",
+            "wetland_tidalflat"
+         ],
+         "paint": {
+            "fill-color": "rgba(203,177,154,0.3)"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-parking",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "amenity_parking",
+            "amenity_bicycle_parking",
+            "amenity_motorcycle_parking"
+         ],
+         "paint": {
+            "fill-color": "#f7efb7"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-place_of_worship",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "amenity_place_of_worship"
+         ],
+         "paint": {
+            "fill-color": "#cdccc9",
+            "fill-outline-color": "#111"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-playground",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "leisure_playground"
+         ],
+         "paint": {
+            "fill-color": "#ccfff1"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-rest_area",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "highway_services",
+            "highway_rest_area"
+         ],
+         "paint": {
+            "fill-color": "#efc8c8"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-sand",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "natural_sand"
+         ],
+         "paint": {
+            "fill-color": "#f5e9c6"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-societal_amenities",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "amenity_hospital",
+            "amenity_university",
+            "amenity_college",
+            "amenity_school",
+            "amenity_kindergarten"
+         ],
+         "paint": {
+            "fill-color": "#f0f0d8"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-station",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "railway_station"
+         ],
+         "paint": {
+            "fill-color": "#d4aaaa"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-quarry",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "landuse_quarry"
+         ],
+         "paint": {
+            "fill-color": "#c5c3c3"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-military",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landuse_overlay",
+         "filter": [
+            "==",
+            "landuse",
+            "military"
+         ],
+         "paint": {
+            "fill-color": "#f55",
+            "fill-opacity": 0.3
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-beach",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "natural_beach",
+            "natural_shoal"
+         ],
+         "paint": {
+            "fill-color": "#fff1ba"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-pitch",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "leisure_pitch"
+         ],
+         "paint": {
+            "fill-color": "#80d7b5"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-track",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "==",
+            "feature",
+            "leisure_track"
+         ],
+         "paint": {
+            "fill-color": "#80d7b5"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-stadium",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "leisure_sports_centre",
+            "leisure_stadium"
+         ],
+         "paint": {
+            "fill-color": "#f0f0d8"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-golf_course",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "leisure_golf_course",
+            "leisure_miniature_golf"
+         ],
+         "paint": {
+            "fill-color": "#b5e3b5"
+         },
+         "interactive": true
+      },
+      {
+         "id": "water-glacier",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "water-areas",
+         "filter": [
+            "==",
+            "natural",
+            "glacier"
+         ],
+         "paint": {
+            "fill-color": "#ddecec",
+            "fill-outline-color": "#9cf"
+         },
+         "interactive": true
+      },
+      {
+         "id": "water-dock-canal",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "water-areas",
+         "filter": [
+            "in",
+            "waterway",
+            "dock",
+            "canal"
+         ],
+         "paint": {
+            "fill-color": "#b5d0d0"
+         },
+         "interactive": true
+      },
+      {
+         "id": "water-basin",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "water-areas",
+         "filter": [
+            "==",
+            "landuse",
+            "basin"
+         ],
+         "paint": {
+            "fill-color": "#b5d0d0"
+         },
+         "interactive": true
+      },
+      {
+         "id": "water-water",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "water-areas",
+         "filter": [
+            "==",
+            "natural",
+            "water"
+         ],
+         "paint": {
+            "fill-color": "#b5d0d0"
+         },
+         "interactive": true
+      },
+      {
+         "id": "water-reservoir",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "water-areas",
+         "filter": [
+            "==",
+            "landuse",
+            "reservoir"
+         ],
+         "paint": {
+            "fill-color": "#b5d0d0"
+         },
+         "interactive": true
+      },
+      {
+         "id": "water-riverbank",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "water-areas",
+         "filter": [
+            "==",
+            "waterway",
+            "riverbank"
+         ],
+         "paint": {
+            "fill-color": "#b5d0d0"
+         },
+         "interactive": true
+      },
+      {
+         "id": "water-stream-ditch-drain-casing",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "water-lines-casing",
+         "filter": [
+            "in",
+            "waterway",
+            "stream",
+            "ditch",
+            "drain"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     1.25
+                  ],
+                  [
+                     15,
+                     1.75
+                  ]
+               ]
+            },
+            "line-color": "white"
+         },
+         "interactive": true
+      },
+      {
+         "id": "water-river-low-zoom",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "water-lines-low-zoom",
+         "minzoom": 8,
+         "maxzoom": 11,
+         "filter": [
+            "==",
+            "waterway",
+            "river"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     9,
+                     0.6
+                  ],
+                  [
+                     10,
+                     0.8
+                  ]
+               ]
+            },
+            "line-color": "#b5d0d0"
+         },
+         "interactive": true
+      },
+      {
+         "id": "water-canal-river-wadi",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "water-lines",
+         "minzoom": 12,
+         "filter": [
+            "in",
+            "waterway",
+            "canal",
+            "river",
+            "wadi"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     12,
+                     1
+                  ],
+                  [
+                     18,
+                     6
+                  ]
+               ]
+            },
+            "line-color": "#b5d0d0"
+         },
+         "interactive": true
+      },
+      {
+         "id": "water-stream-ditch-drain",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "water-lines",
+         "minzoom": 13,
+         "filter": [
+            "in",
+            "waterway",
+            "stream",
+            "ditch",
+            "drain"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     1
+                  ],
+                  [
+                     18,
+                     2.5
+                  ]
+               ]
+            },
+            "line-color": "#b5d0d0"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-motorway-casing",
+         "minzoom": 5,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_motorway"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     5,
+                     0.25
+                  ],
+                  [
+                     19,
+                     14.5
+                  ]
+               ]
+            },
+            "line-color": "#dc2a67"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-motorway-fill",
+         "minzoom": 5,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-fill",
+         "filter": [
+            "==",
+            "feature",
+            "highway_motorway"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     5,
+                     0.15
+                  ],
+                  [
+                     19,
+                     12.5
+                  ]
+               ]
+            },
+            "line-color": "#e892a2"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-trunk-casing",
+         "minzoom": 5,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_trunk"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     5,
+                     0.2
+                  ],
+                  [
+                     19,
+                     14.5
+                  ]
+               ]
+            },
+            "line-color": "#c84e2f"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-trunk-fill",
+         "minzoom": 5,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-fill",
+         "filter": [
+            "==",
+            "feature",
+            "highway_motorway"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     5,
+                     1.5
+                  ],
+                  [
+                     19,
+                     13.5
+                  ]
+               ]
+            },
+            "line-color": "#f9b29c"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-primary-casing",
+         "minzoom": 8,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_primary"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     8,
+                     0.5
+                  ],
+                  [
+                     19,
+                     14.5
+                  ]
+               ]
+            },
+            "line-color": "#B88B35"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-primary-fill",
+         "minzoom": 8,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-fill",
+         "filter": [
+            "==",
+            "feature",
+            "highway_primary"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     8,
+                     0.25
+                  ],
+                  [
+                     19,
+                     13.5
+                  ]
+               ]
+            },
+            "line-color": "#FCD6A4"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-secondary-casing",
+         "minzoom": 9,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_secondary"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     9,
+                     0.5
+                  ],
+                  [
+                     19,
+                     14.5
+                  ]
+               ]
+            },
+            "line-color": "#707d05"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-secondary-fill",
+         "minzoom": 9,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-fill",
+         "filter": [
+            "==",
+            "feature",
+            "highway_secondary"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     9,
+                     0.25
+                  ],
+                  [
+                     19,
+                     13.5
+                  ]
+               ]
+            },
+            "line-color": "#F6F9BE"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-tertiary-casing",
+         "minzoom": 12,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_tertiary"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     12,
+                     1.65
+                  ],
+                  [
+                     19,
+                     14.5
+                  ]
+               ]
+            },
+            "line-color": "#8f8f8f"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-tertiary-fill",
+         "minzoom": 12,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-fill",
+         "filter": [
+            "==",
+            "feature",
+            "highway_tertiary"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     12,
+                     1
+                  ],
+                  [
+                     19,
+                     13.5
+                  ]
+               ]
+            },
+            "line-color": "#ffffff"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-residential-casing",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_residential"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     1.5
+                  ],
+                  [
+                     19,
+                     12.5
+                  ]
+               ]
+            },
+            "line-color": "#bbb"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-residential-fill",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-fill",
+         "filter": [
+            "==",
+            "feature",
+            "highway_residential"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     1.25
+                  ],
+                  [
+                     19,
+                     12
+                  ]
+               ]
+            },
+            "line-color": "#ffffff"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-service-casing",
+         "minzoom": 14,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_service"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     14,
+                     0.5
+                  ],
+                  [
+                     19,
+                     5.5
+                  ]
+               ]
+            },
+            "line-color": "#bbb"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-service-fill",
+         "minzoom": 14,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-fill",
+         "filter": [
+            "==",
+            "feature",
+            "highway_service"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     14,
+                     0.25
+                  ],
+                  [
+                     19,
+                     4.5
+                  ]
+               ]
+            },
+            "line-color": "#ffffff"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-living-street-casing",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_living_street"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     1.6
+                  ],
+                  [
+                     19,
+                     8.5
+                  ]
+               ]
+            },
+            "line-color": "#bbb"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-living-street-fill",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_living_street"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     1.25
+                  ],
+                  [
+                     19,
+                     8
+                  ]
+               ]
+            },
+            "line-color": "#ededed"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-pedestrian-casing",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_pedestrian"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     1
+                  ],
+                  [
+                     19,
+                     8.25
+                  ]
+               ]
+            },
+            "line-color": "#999"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-pedestrian-fill",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_pedestrian"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     0.5
+                  ],
+                  [
+                     19,
+                     7.5
+                  ]
+               ]
+            },
+            "line-color": "#dddde8"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-road-casing",
+         "minzoom": 14,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_road"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     14,
+                     1
+                  ],
+                  [
+                     19,
+                     8.25
+                  ]
+               ]
+            },
+            "line-color": "#bbb"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-road-fill",
+         "minzoom": 14,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_road"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     14,
+                     0.5
+                  ],
+                  [
+                     19,
+                     7.5
+                  ]
+               ]
+            },
+            "line-color": "#ddd"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-unclassified-casing",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_unclassified"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     1
+                  ],
+                  [
+                     19,
+                     8.25
+                  ]
+               ]
+            },
+            "line-color": "#bbb"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-unclassified-fill",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_unclassified"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     0.5
+                  ],
+                  [
+                     19,
+                     7.5
+                  ]
+               ]
+            },
+            "line-color": "#ffffff"
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-steps",
+         "minzoom": 15,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_steps"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     1
+                  ],
+                  [
+                     15,
+                     5
+                  ]
+               ]
+            },
+            "line-color": "salmon",
+            "line-dasharray": [
+               0.5,
+               0.25
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-bridleway",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "any",
+            [
+               "==",
+               "feature",
+               "highway_bridleway"
+            ],
+            [
+               "all",
+               [
+                  "==",
+                  "feature",
+                  "highway_path"
+               ],
+               [
+                  "==",
+                  "horse",
+                  "designated"
+               ]
+            ]
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     0.3
+                  ],
+                  [
+                     15,
+                     1.2
+                  ]
+               ]
+            },
+            "line-color": "green",
+            "line-dasharray": [
+               2,
+               2
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-footway",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "any",
+            [
+               "==",
+               "feature",
+               "highway_footway"
+            ],
+            [
+               "all",
+               [
+                  "==",
+                  "feature",
+                  "highway_path"
+               ],
+               [
+                  "!=",
+                  "bicycle",
+                  "designated"
+               ],
+               [
+                  "!=",
+                  "horse",
+                  "designated"
+               ]
+            ]
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     0.3
+                  ],
+                  [
+                     15,
+                     1.2
+                  ]
+               ]
+            },
+            "line-color": "salmon",
+            "line-dasharray": [
+               2,
+               2
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-cycleway",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "any",
+            [
+               "==",
+               "feature",
+               "highway_cycleway"
+            ],
+            [
+               "all",
+               [
+                  "==",
+                  "feature",
+                  "highway_path"
+               ],
+               [
+                  "==",
+                  "bicycle",
+                  "designated"
+               ]
+            ]
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     0.3
+                  ],
+                  [
+                     15,
+                     1.2
+                  ]
+               ]
+            },
+            "line-color": "blue",
+            "line-dasharray": [
+               2,
+               2
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-track",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "roads-casing",
+         "filter": [
+            "==",
+            "feature",
+            "highway_track"
+         ],
+         "line-join": "round",
+         "line-cap": "round",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     13,
+                     0.3
+                  ],
+                  [
+                     15,
+                     1.2
+                  ]
+               ]
+            },
+            "line-color": "#996600",
+            "line-dasharray": [
+               3,
+               3
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "power-line",
+         "minzoom": 14,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "power-line",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     14,
+                     0.5
+                  ],
+                  [
+                     19,
+                     1.2
+                  ]
+               ]
+            },
+            "line-color": "#888"
+         },
+         "interactive": true
+      },
+      {
+         "id": "power-minorline",
+         "minzoom": 16,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "power-minorline",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     16,
+                     0.3
+                  ],
+                  [
+                     18,
+                     0.5
+                  ]
+               ]
+            },
+            "line-color": "#888"
+         },
+         "interactive": true
+      },
+      {
+         "id": "buildings",
+         "minzoom": 13,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "buildings",
+         "paint": {
+            "fill-color": "#d9d0c9",
+            "fill-outline-color": "#B3AAA3"
+         },
+         "interactive": true
+      },
+      {
+         "id": "buildings-major-terminal",
+         "minzoom": 13,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "buildings-major",
+         "filter": [
+            "==",
+            "aeroway",
+            "terminal"
+         ],
+         "paint": {
+            "fill-color": "#cc99ff",
+            "fill-outline-color": "#A673D9"
+         },
+         "interactive": true
+      },
+      {
+         "id": "buildings-major-place_of_worship",
+         "minzoom": 13,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "buildings-major",
+         "filter": [
+            "==",
+            "amenity",
+            "place_of_worship"
+         ],
+         "paint": {
+            "fill-color": "#A69D96",
+            "fill-outline-color": "#736A63"
+         },
+         "interactive": true
+      },
+      {
+         "id": "bridge",
+         "minzoom": 12,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "bridge",
+         "paint": {
+            "fill-color": "#B8B8B8"
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-2",
+         "minzoom": 4,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "2"
+         ],
+         "line-join": "bevel",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     4,
+                     1.2
+                  ],
+                  [
+                     10,
+                     6
+                  ]
+               ]
+            },
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-3",
+         "minzoom": 4,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "3"
+         ],
+         "line-join": "bevel",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     4,
+                     0.6
+                  ],
+                  [
+                     10,
+                     4
+                  ]
+               ]
+            },
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               4,
+               2
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-4",
+         "minzoom": 4,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "2"
+         ],
+         "line-join": "bevel",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     4,
+                     0.4
+                  ],
+                  [
+                     12,
+                     3
+                  ]
+               ]
+            },
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               4,
+               3
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-5",
+         "minzoom": 11,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "5"
+         ],
+         "line-join": "bevel",
+         "paint": {
+            "line-width": 2,
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               6,
+               3,
+               2,
+               3,
+               2,
+               3
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-6",
+         "minzoom": 11,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "6"
+         ],
+         "line-join": "bevel",
+         "paint": {
+            "line-width": 2,
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               6,
+               3,
+               2,
+               3
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-7",
+         "minzoom": 12,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "7"
+         ],
+         "line-join": "bevel",
+         "paint": {
+            "line-width": 1.5,
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               5,
+               2
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-8",
+         "minzoom": 12,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "8"
+         ],
+         "line-join": "bevel",
+         "paint": {
+            "line-width": 1.5,
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               5,
+               2
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-9",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "9"
+         ],
+         "line-join": "bevel",
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     4,
+                     0.6
+                  ],
+                  [
+                     10,
+                     4
+                  ]
+               ]
+            },
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               2,
+               3
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-10",
+         "minzoom": 13,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-high-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "10"
+         ],
+         "line-join": "bevel",
+         "paint": {
+            "line-width": 2,
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               2,
+               3
+            ]
+         },
+         "interactive": true
+      }
+   ]
 }
