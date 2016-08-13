@@ -2165,8 +2165,8 @@
                  "Open Sans Regular"
              ],  
              "text-field": "{addr:housenumber}",
-             "text-size": 9,
-         }
+             "text-size": 9
+         },
          "type": "symbol",
          "source": "osm2vectortiles",
          "source-layer": "housenumbers",
