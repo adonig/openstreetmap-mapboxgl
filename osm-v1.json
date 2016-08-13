@@ -2241,6 +2241,21 @@
             "text-halo-color": "rgba(255,255,255,0.5)"
          },
          "interactive": true
+      },
+      {
+         "id": "interpolation",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "interpolation",
+         "paint": {
+            "line-width": 1,
+            "line-color": "#888",
+            "line-dasharray": [
+               1,
+               2
+            ]
+         },
+         "interactive": true
       }
    ]
 }
