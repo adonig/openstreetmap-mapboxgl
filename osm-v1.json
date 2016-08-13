@@ -2171,7 +2171,7 @@
          "source": "osm2vectortiles",
          "source-layer": "housenumbers",
          "paint": {
-            "text-color": "#666",
+            "text-color": "#666"
          },
          "interactive": true
       }
