@@ -2256,6 +2256,57 @@
             ]
          },
          "interactive": true
+      },
+      
+      
+      
+      {
+         "id": "ferry-routes",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "ferry-routes",
+         "paint": {
+           "line-width": {
+               "stops": [
+                  [
+                     7,
+                     0.4
+                  ],
+                  [
+                     11,
+                     0.8
+                  ]
+               ]
+            },
+            "line-color": "#66f",
+            "line-dasharray": [
+               3,
+               3
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "ferry-routes-text",
+         "type": "symbol",
+         "source": "osm2vectortiles",
+         "source-layer": "ferry-routes-text",
+         "layout": {
+            "text-font": [
+               "Open Sans Regular"
+            ],
+            "text-field": "{name}",
+            "text-size": 11,
+            "symbol-placement": "line",
+            "text-offset": [0,-0.75]
+         },
+         "paint": {
+            "text-color": "#66f",
+            "text-halo-width": 1,
+            "text-halo-color": "rgba(255,255,255,0.6)"
+
+         },
+         "interactive": true
       }
    ]
 }
