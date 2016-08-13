@@ -10,6 +10,7 @@
       }
    },
    "glyphs": "https://raw.githubusercontent.com/stirringhalo/openstreetmap-mapboxgl/master/glyphs/{fontstack}/{range}.pbf",
+   "sprite": "https://raw.githubusercontent.com/stirringhalo/openstreetmap-mapboxgl/master/sprites/sprites",
    "layers": [
       {
          "id": "background",
@@ -2257,16 +2258,13 @@
          },
          "interactive": true
       },
-      
-      
-      
       {
          "id": "ferry-routes",
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "ferry-routes",
          "paint": {
-           "line-width": {
+            "line-width": {
                "stops": [
                   [
                      7,
@@ -2298,15 +2296,56 @@
             "text-field": "{name}",
             "text-size": 11,
             "symbol-placement": "line",
-            "text-offset": [0,-0.75]
+            "text-offset": [
+               0,
+               -0.75
+            ]
          },
          "paint": {
             "text-color": "#66f",
             "text-halo-width": 1,
             "text-halo-color": "rgba(255,255,255,0.6)"
+         },
+         "interactive": true
+      }
+      
+      
+      
+      
+      
+      ,
+      {
+         "id": "amenity-points",
+         "type": "symbol",
+         "source": "osm2vectortiles",
+         "source-layer": "amenity-points",
+         "layout": {
+             "icon-image": "shop_{maki}"
+         },
+         "paint": {
 
          },
          "interactive": true
       }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
    ]
 }
