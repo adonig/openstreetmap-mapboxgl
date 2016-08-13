@@ -4,7 +4,7 @@
    "sources": {
       "osm2vectortiles": {
          "tiles": [
-            "http://45.56.99.211/:19090/data/osm2vectortiles/{z}/{x}/{y}.pbf"
+            "http://45.56.99.211:19090/data/osm2vectortiles/{z}/{x}/{y}.pbf"
          ],
          "type": "vector"
       }
