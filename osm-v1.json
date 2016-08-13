@@ -2153,6 +2153,25 @@
             ]
          },
          "interactive": true
-      }
+      },
+      
+      
+      
+      {
+         "id": "housenumbers",
+         "minzoom": 17,
+         "type": "symbol",
+         "source": "osm2vectortiles",
+         "source-layer": "housenumbers",
+         "paint": {
+            "text-field": "{addr:housenumber}",
+            "text-fill": "#666",
+            "text-size": 9,
+            "text-font": [
+               "Open Sans Regular"
+            ],
+         }
+         "interactive": true
+      },
    ]
 }
