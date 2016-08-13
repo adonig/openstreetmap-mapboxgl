@@ -2314,6 +2314,7 @@
          "source": "osm2vectortiles",
          "source-layer": "amenity-points",
          "layout": {
+            "icon-allow-overlap": true,
             "icon-image": "{feature}"
          },
          "paint": {},
