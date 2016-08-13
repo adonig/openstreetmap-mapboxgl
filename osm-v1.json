@@ -1013,7 +1013,7 @@
          "filter": [
             "==",
             "feature",
-            "highway_motorway"
+            "highway_trunk"
          ],
          "line-join": "round",
          "line-cap": "round",
