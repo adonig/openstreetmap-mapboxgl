@@ -2311,6 +2311,7 @@
       {
          "id": "amenity-points",
          "type": "symbol",
+         "minzoom": 14,
          "source": "osm2vectortiles",
          "source-layer": "amenity-points",
          "layout": {
