@@ -9,7 +9,7 @@
          "type": "vector"
       }
    },
-   "glyphs": "https://raw.githubusercontent.com/osm2vectortiles/mapbox-gl-styles/master/glyphs/{fontstack}/{range}.pbf",
+   "glyphs": "https://github.com/stirringhalo/openstreetmap-mapboxgl/raw/master/glyphs/{fontstack}/{range}.pbf",
    "layers": [
       {
          "id": "background",
