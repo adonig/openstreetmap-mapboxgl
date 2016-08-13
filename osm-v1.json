@@ -1800,7 +1800,7 @@
       },
       {
          "id": "power-line",
-         "minzoom": 14,
+         "minzoom": 13,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "power-line",
@@ -1823,7 +1823,7 @@
       },
       {
          "id": "power-minorline",
-         "minzoom": 16,
+         "minzoom": 14,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "power-minorline",
@@ -1844,6 +1844,36 @@
          },
          "interactive": true
       },
+      {
+         "id": "power-towers",
+         "minzoom": 13,
+         "type": "symbol",
+         "source": "osm2vectortiles",
+         "source-layer": "power-towers",
+         "layout": {
+            "icon-allow-overlap": true,
+            "icon-image": "power_tower"
+         },
+         "paint": {},
+         "interactive": true
+      },
+      {
+         "id": "power-poles",
+         "minzoom": 14,
+         "type": "symbol",
+         "source": "osm2vectortiles",
+         "source-layer": "power-poles",
+        "layout": {
+            "icon-allow-overlap": true,
+            "icon-image": "power_tower_small"
+         },
+         "paint": {},
+         "interactive": true
+      },
+      
+      
+      
+      
       {
          "id": "buildings",
          "minzoom": 13,
