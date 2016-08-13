@@ -8,7 +8,7 @@ The goal of this project isn't to be a 1-to-1 replacement for openstreetmap-cart
 
 ![Screenshot](screenshot3.png "Screenshot")
 Left: Mapbox GL, Right: Openstreetmap-carto
-
+ 
 All building is using a branch of the OSM2VectorTiles project. The build will be similiar to that pipeline.
 
 To use the following instructions, you will need to have Docker and Docker-compose installed. You may also need to add yourself to the "docker" group to avoid having to run the docker-compose commands under sudo.
