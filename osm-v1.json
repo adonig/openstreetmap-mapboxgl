@@ -2160,16 +2160,18 @@
       {
          "id": "housenumbers",
          "minzoom": 17,
+         "layout": {
+             "text-font": [
+                 "Open Sans Regular"
+             ],  
+             "text-field": "{addr:housenumber}",
+             "text-size": 9,
+         }
          "type": "symbol",
          "source": "osm2vectortiles",
          "source-layer": "housenumbers",
          "paint": {
-            "text-field": "{addr:housenumber}",
-            "text-fill": "#666",
-            "text-size": 9,
-            "text-font": [
-               "Open Sans Regular"
-            ]
+            "text-color": "#666",
          },
          "interactive": true
       }
