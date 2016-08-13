@@ -2163,7 +2163,7 @@
                "Open Sans Regular"
             ],
             "text-field": "{name}",
-            "text-size": 12,
+            "text-size": 10,
             "symbol-placement": "line"
          },
          "paint": {
