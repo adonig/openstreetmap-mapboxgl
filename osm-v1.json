@@ -1863,17 +1863,13 @@
          "type": "symbol",
          "source": "osm2vectortiles",
          "source-layer": "power-poles",
-        "layout": {
+         "layout": {
             "icon-allow-overlap": true,
             "icon-image": "power_tower_small"
          },
          "paint": {},
          "interactive": true
       },
-      
-      
-      
-      
       {
          "id": "buildings",
          "minzoom": 13,
@@ -2349,6 +2345,29 @@
             "icon-image": "{feature}"
          },
          "paint": {},
+         "interactive": true
+      },
+      {
+         "id": "citywalls",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "citywalls",
+         "paint": {
+            "line-color": "grey",
+            "line-opacity": 0.8,
+            "line-width": {
+               "stops": [
+                  [
+                     14,
+                     2
+                  ],
+                  [
+                    19,
+                    4.5
+                  ]
+               ]
+            }
+         },
          "interactive": true
       }
    ]
