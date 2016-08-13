@@ -2307,45 +2307,17 @@
             "text-halo-color": "rgba(255,255,255,0.6)"
          },
          "interactive": true
-      }
-      
-      
-      
-      
-      
-      ,
+      },
       {
          "id": "amenity-points",
          "type": "symbol",
          "source": "osm2vectortiles",
          "source-layer": "amenity-points",
          "layout": {
-             "icon-image": "shop_{maki}"
+            "icon-image": "{feature}"
          },
-         "paint": {
-
-         },
+         "paint": {},
          "interactive": true
       }
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
    ]
 }
