@@ -43,7 +43,6 @@
       },
       {
          "id": "world",
-         "maxzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "world",
@@ -2194,7 +2193,7 @@
          },
          "interactive": true
       },
-    {
+      {
          "id": "housenumbers",
          "type": "symbol",
          "source": "osm2vectortiles",
