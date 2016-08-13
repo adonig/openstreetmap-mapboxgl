@@ -2193,6 +2193,23 @@
             "text-halo-color": "rgba(255,255,255,0.7)"
          },
          "interactive": true
+      },
+    {
+         "id": "housenumbers",
+         "type": "symbol",
+         "source": "osm2vectortiles",
+         "source-layer": "housenumbers",
+         "layout": {
+            "text-font": [
+               "Open Sans Regular"
+            ],
+            "text-field": "{addr:housenumber}",
+            "text-size": 9
+         },
+         "paint": {
+            "text-color": "#666"
+         },
+         "interactive": true
       }
    ]
 }
