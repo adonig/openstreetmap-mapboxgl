@@ -16,8 +16,16 @@ If you did not receive a copy of the CC0 Public Domain Dedication
 along with the Software, see
 <http://creativecommons.org/publicdomain/zero/1.0/>
 
+# Sprites
+
+Sprites are from https://github.com/gravitystorm/openstreetmap-carto, using color 
+tweaking by me to give a static color before converting with spritezero-cli 
+(https://github.com/mapbox/spritezero-cli). The original CC0 license of openstreetmap-carto 
+(same as the openstreetmap-mapboxgl) applies to the raw sprites and the pbf versions. 
+
 # Fonts
 
 The Open Sans font family is used for this style:
 
-- Open Sans, digitized data(c) 2010-2011, Google Corporation. Open Sans is licensed under the Apache License, Version 2.0. You may obtain a copy of the license at http://www.apache.org/licenses/LICENSE-2.0.
+- Open Sans, digitized data(c) 2010-2011, Google Corporation. Open Sans is licensed under 
+the Apache License, Version 2.0. You may obtain a copy of the license at http://www.apache.org/licenses/LICENSE-2.0.
