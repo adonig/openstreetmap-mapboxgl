@@ -2167,9 +2167,7 @@
             "symbol-placement": "line"
          },
          "paint": {
-            "text-color": "black",
-            "text-halo-width": 1.5,
-            "text-halo-color": "rgba(255,255,255,0.7)"
+            "text-color": "black"
          },
          "interactive": true
       },
@@ -2187,9 +2185,7 @@
             "symbol-placement": "line"
          },
          "paint": {
-            "text-color": "black",
-            "text-halo-width": 1.5,
-            "text-halo-color": "rgba(255,255,255,0.7)"
+            "text-color": "black"
          },
          "interactive": true
       },
@@ -2207,6 +2203,42 @@
          },
          "paint": {
             "text-color": "#666"
+         },
+         "interactive": true
+      },
+      {
+         "id": "housenames",
+         "type": "symbol",
+         "source": "osm2vectortiles",
+         "source-layer": "housenames",
+         "layout": {
+            "text-font": [
+               "Open Sans Regular"
+            ],
+            "text-field": "{addr:housename}",
+            "text-size": 9
+         },
+         "paint": {
+            "text-color": "#666"
+         },
+         "interactive": true
+      },
+      {
+         "id": "building-text",
+         "type": "symbol",
+         "source": "osm2vectortiles",
+         "source-layer": "building-text",
+         "layout": {
+            "text-font": [
+               "Open Sans Regular"
+            ],
+            "text-field": "{name}",
+            "text-size": 11
+         },
+         "paint": {
+            "text-color": "#444",
+            "text-halo-width": 1.5,
+            "text-halo-color": "rgba(255,255,255,0.5)"
          },
          "interactive": true
       }
