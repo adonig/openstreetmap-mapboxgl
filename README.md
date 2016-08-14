@@ -6,8 +6,7 @@ The goal of this project isn't to be a 1-to-1 replacement for openstreetmap-cart
 
 #### If you have an issue with the openstreetmap-carto branch, please raise it here as to avoid confusing the main OSM2VectorTiles issues page.
 
-![Screenshot](screenshot3.png "Screenshot")
-Left: Mapbox GL, Right: Openstreetmap-carto
+![Screenshot](screenshot.png "Screenshot")
  
 All building is using a branch of the OSM2VectorTiles project. The build will be similiar to that pipeline.
 
