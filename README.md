@@ -15,11 +15,8 @@ To use the following instructions, you will need to have Docker and Docker-compo
 
 ## Building:
 
-<<<<<<< Updated upstream
-=======
 ### To be fixed, doesn't completely build.
 
->>>>>>> Stashed changes
 1. git clone -b openstreetmap-style https://github.com/osm2vectortiles/osm2vectortiles.git
 2. cd osm2vectortiles
 3. make postgis; make import-osm2pgsql; make generate-tm2source; make export-mbtiles
