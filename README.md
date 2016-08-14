@@ -14,18 +14,16 @@ To use the following instructions, you will need to have Docker and Docker-compo
 
 ## Building:
 
-### To be fixed, doesn't completely build.
-
 1. git clone -b openstreetmap-style https://github.com/osm2vectortiles/osm2vectortiles.git
 2. cd osm2vectortiles
 3. make postgis; make import-osm2pgsql; make generate-tm2source; make export-mbtiles
 4. docker-compose up -d postgis
-5. Put any PBF extract you'd like into osm2vectortiles/import . Any name is acceptable. I've used small extracts like Liechtenstein from Geofabrik quite successfully
+5. Put any PBF extract you'd like into osm2vectortiles/import . Any name is acceptable. I've used small extracts like Switzerland from Geofabrik quite successfully
 6. docker-compose up import-osm2pgsql
 7. docker-compose up generate-tm2source
-8. Modify osm2vectortiles/docker-compose.yml and search for the line: "BBOX". Modify this line to the BBOX of your extract. As it is, it is setup for Liechtenstein
+8. Modify osm2vectortiles/docker-compose.yml and search for the line: "BBOX". Modify this line to the BBOX of your extract. As it is, it is setup for Switzerland
 9. docker-compose up export
-10. Wait 30s, you will have an MBTiles in the osm2vectortiles/export directory
+10. Wait about an hour or two, you will have an MBTiles in the osm2vectortiles/export directory
 
 Feel free to import different areas by placing a different PBF into the import directory and modifying the docker-compose.yml BBOX. The export-worker approach for large exports across a cluster should work fine but is currently untested.
 
