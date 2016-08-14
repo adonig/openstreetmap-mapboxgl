@@ -915,6 +915,14 @@
          },
          "interactive": true
       },
+      
+     
+      
+      
+      
+      
+      
+      
       {
          "id": "highway-motorway-casing",
          "minzoom": 5,
@@ -929,15 +937,15 @@
          "line-join": "round",
          "line-cap": "round",
          "paint": {
-            "line-width": {
+            "line-gap-width": {
                "stops": [
                   [
                      5,
-                     0.25
+                     0.15
                   ],
                   [
                      19,
-                     14.5
+                     12.5
                   ]
                ]
             },
@@ -989,15 +997,15 @@
          "line-join": "round",
          "line-cap": "round",
          "paint": {
-            "line-width": {
+            "line-gap-width": {
                "stops": [
                   [
                      5,
-                     0.25
+                     0.15
                   ],
                   [
                      19,
-                     14.5
+                     12.5
                   ]
                ]
             },
@@ -1049,15 +1057,15 @@
          "line-join": "round",
          "line-cap": "round",
          "paint": {
-            "line-width": {
+            "line-gap-width": {
                "stops": [
                   [
                      8,
-                     0.5
+                     0.25
                   ],
                   [
                      19,
-                     14.5
+                     13.5
                   ]
                ]
             },
@@ -1109,15 +1117,15 @@
          "line-join": "round",
          "line-cap": "round",
          "paint": {
-            "line-width": {
+            "line-gap-width": {
                "stops": [
                   [
                      9,
-                     0.5
+                     0.25
                   ],
                   [
                      19,
-                     14.5
+                     13.5
                   ]
                ]
             },
@@ -1169,15 +1177,15 @@
          "line-join": "round",
          "line-cap": "round",
          "paint": {
-            "line-width": {
+            "line-gap-width": {
                "stops": [
                   [
                      12,
-                     1.65
+                     1
                   ],
                   [
                      19,
-                     14.5
+                     13.5
                   ]
                ]
             },
@@ -1229,15 +1237,15 @@
          "line-join": "round",
          "line-cap": "round",
          "paint": {
-            "line-width": {
+            "line-gap-width": {
                "stops": [
                   [
                      13,
-                     1.5
+                     1.25
                   ],
                   [
                      19,
-                     12.5
+                     12
                   ]
                ]
             },
@@ -1289,15 +1297,15 @@
          "line-join": "round",
          "line-cap": "round",
          "paint": {
-            "line-width": {
+            "line-gap-width": {
                "stops": [
                   [
                      14,
-                     0.5
+                     0.25
                   ],
                   [
                      19,
-                     5.5
+                     4.5
                   ]
                ]
             },
@@ -1349,15 +1357,15 @@
          "line-join": "round",
          "line-cap": "round",
          "paint": {
-            "line-width": {
+            "line-gap-width": {
                "stops": [
                   [
                      13,
-                     1.6
+                     1.25
                   ],
                   [
                      19,
-                     8.5
+                     8
                   ]
                ]
             },
@@ -1409,15 +1417,15 @@
          "line-join": "round",
          "line-cap": "round",
          "paint": {
-            "line-width": {
+            "line-gap-width": {
                "stops": [
                   [
                      13,
-                     1
+                     0.5
                   ],
                   [
                      19,
-                     8.25
+                     7.5
                   ]
                ]
             },
@@ -1469,15 +1477,15 @@
          "line-join": "round",
          "line-cap": "round",
          "paint": {
-            "line-width": {
+            "line-gap-width": {
                "stops": [
                   [
                      14,
-                     1
+                     0.5
                   ],
                   [
                      19,
-                     8.25
+                     7.5
                   ]
                ]
             },
@@ -1529,15 +1537,15 @@
          "line-join": "round",
          "line-cap": "round",
          "paint": {
-            "line-width": {
+            "line-gap-width": {
                "stops": [
                   [
                      13,
-                     1
+                     0.5
                   ],
                   [
                      19,
-                     8.25
+                     7.5
                   ]
                ]
             },
