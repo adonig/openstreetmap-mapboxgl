@@ -950,7 +950,7 @@
          "minzoom": 5,
          "type": "line",
          "source": "osm2vectortiles",
-         "source-layer": "roads-fill",
+         "source-layer": "roads-casing",
          "filter": [
             "==",
             "feature",
@@ -1010,7 +1010,7 @@
          "minzoom": 5,
          "type": "line",
          "source": "osm2vectortiles",
-         "source-layer": "roads-fill",
+         "source-layer": "roads-casing",
          "filter": [
             "==",
             "feature",
@@ -1070,7 +1070,7 @@
          "minzoom": 8,
          "type": "line",
          "source": "osm2vectortiles",
-         "source-layer": "roads-fill",
+         "source-layer": "roads-casing",
          "filter": [
             "==",
             "feature",
@@ -1130,7 +1130,7 @@
          "minzoom": 9,
          "type": "line",
          "source": "osm2vectortiles",
-         "source-layer": "roads-fill",
+         "source-layer": "roads-casing",
          "filter": [
             "==",
             "feature",
@@ -1190,7 +1190,7 @@
          "minzoom": 12,
          "type": "line",
          "source": "osm2vectortiles",
-         "source-layer": "roads-fill",
+         "source-layer": "roads-casing",
          "filter": [
             "==",
             "feature",
@@ -1250,7 +1250,7 @@
          "minzoom": 13,
          "type": "line",
          "source": "osm2vectortiles",
-         "source-layer": "roads-fill",
+         "source-layer": "roads-casing",
          "filter": [
             "==",
             "feature",
@@ -1310,7 +1310,7 @@
          "minzoom": 14,
          "type": "line",
          "source": "osm2vectortiles",
-         "source-layer": "roads-fill",
+         "source-layer": "roads-casing",
          "filter": [
             "==",
             "feature",
@@ -2370,9 +2370,6 @@
          },
          "interactive": true
       },
-      
-      
-      
       {
          "id": "water-lines-text",
          "type": "symbol",
@@ -2408,8 +2405,8 @@
             ],
             "text-field": "{name}",
             "text-size": 12,
-                        "symbol-placement": "point"
-         },         
+            "symbol-placement": "point"
+         },
          "paint": {
             "text-color": "#6699cc",
             "text-halo-width": 1,
@@ -2417,6 +2414,5 @@
          },
          "interactive": true
       }
-      
    ]
 }
