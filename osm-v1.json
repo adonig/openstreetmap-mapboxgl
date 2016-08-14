@@ -801,8 +801,10 @@
             "ditch",
             "drain"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -832,8 +834,10 @@
             "waterway",
             "river"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -864,8 +868,10 @@
             "river",
             "wadi"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -896,8 +902,10 @@
             "ditch",
             "drain"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -926,8 +934,10 @@
             "feature",
             "highway_motorway"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-gap-width": {
                "stops": [
@@ -956,8 +966,10 @@
             "feature",
             "highway_trunk"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-gap-width": {
                "stops": [
@@ -986,8 +998,10 @@
             "feature",
             "highway_primary"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-gap-width": {
                "stops": [
@@ -1016,8 +1030,10 @@
             "feature",
             "highway_secondary"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-gap-width": {
                "stops": [
@@ -1046,8 +1062,10 @@
             "feature",
             "highway_tertiary"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-gap-width": {
                "stops": [
@@ -1076,8 +1094,10 @@
             "feature",
             "highway_residential"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-gap-width": {
                "stops": [
@@ -1106,8 +1126,10 @@
             "feature",
             "highway_service"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-gap-width": {
                "stops": [
@@ -1136,8 +1158,10 @@
             "feature",
             "highway_living_street"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-gap-width": {
                "stops": [
@@ -1166,8 +1190,10 @@
             "feature",
             "highway_pedestrian"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-gap-width": {
                "stops": [
@@ -1196,8 +1222,10 @@
             "feature",
             "highway_road"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-gap-width": {
                "stops": [
@@ -1226,8 +1254,10 @@
             "feature",
             "highway_unclassified"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-gap-width": {
                "stops": [
@@ -1256,8 +1286,10 @@
             "feature",
             "highway_steps"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1306,8 +1338,10 @@
                ]
             ]
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1361,8 +1395,10 @@
                ]
             ]
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1411,8 +1447,10 @@
                ]
             ]
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1445,8 +1483,10 @@
             "feature",
             "highway_track"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1479,8 +1519,10 @@
             "feature",
             "highway_motorway"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1509,8 +1551,10 @@
             "feature",
             "highway_trunk"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1539,8 +1583,10 @@
             "feature",
             "highway_primary"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1569,8 +1615,10 @@
             "feature",
             "highway_secondary"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1599,8 +1647,10 @@
             "feature",
             "highway_tertiary"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1629,8 +1679,10 @@
             "feature",
             "highway_residential"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1659,8 +1711,10 @@
             "feature",
             "highway_service"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1689,8 +1743,10 @@
             "feature",
             "highway_living_street"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1719,8 +1775,10 @@
             "feature",
             "highway_pedestrian"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1749,8 +1807,10 @@
             "feature",
             "highway_road"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -1779,8 +1839,10 @@
             "feature",
             "highway_unclassified"
          ],
-         "line-join": "round",
-         "line-cap": "round",
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
          "paint": {
             "line-width": {
                "stops": [
