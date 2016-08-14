@@ -915,20 +915,6 @@
          },
          "interactive": true
       },
-      
-      
-      
-      
-      
-      
-      
-     
-      
-      
-      
-      
-    
-      
       {
          "id": "highway-motorway-casing",
          "minzoom": 5,
@@ -1109,7 +1095,6 @@
          },
          "interactive": true
       },
-
       {
          "id": "highway-service-casing",
          "minzoom": 14,
@@ -1483,10 +1468,7 @@
          },
          "interactive": true
       },
-      
-      
-      
-            {
+      {
          "id": "highway-motorway-fill",
          "minzoom": 5,
          "type": "line",
@@ -1816,12 +1798,6 @@
          },
          "interactive": true
       },
-
-      
-      
-      
-      
-      
       {
          "id": "power-line",
          "minzoom": 13,
