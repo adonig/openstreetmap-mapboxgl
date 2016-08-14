@@ -2473,6 +2473,151 @@
             "text-halo-color": "rgba(255,255,255,0.6)"
          },
          "interactive": true
+      },
+      
+      
+      {
+         "id": "placenames-small",
+         "type": "symbol",
+         "source": "osm2vectortiles",
+         "source-layer": "placenames-small",
+         "layout": {
+            "text-font": [
+               "Open Sans Regular"
+            ],
+            "text-field": "{name}",
+            "text-size": {
+                
+            "stops": [
+                  [
+                     12,
+                     10
+                  ],
+                  [
+                     16,
+                     15
+                  ]
+               ]        
+                
+        
+            }
+         },
+         "paint": {
+            "text-color": "#777777",
+            "text-halo-width": 1.5,
+            "text-halo-color": "white"
+         },
+         "interactive": true
+      },
+      {
+         "id": "placenames-medium",
+         "type": "symbol",
+         "source": "osm2vectortiles",
+         "source-layer": "placenames-medium",
+         "layout": {
+            "text-font": [
+               "Open Sans Regular"
+            ],
+            "text-field": "{name}",
+            "text-size": {
+                
+            "stops": [
+                  [
+                     5,
+                     9
+                  ],
+                  [
+                     11,
+                     13
+                  ]
+               ]        
+                
+        
+            }
+         },
+         "paint": {
+            "text-color": "#222",
+            "text-halo-width": 1.5,
+            "text-halo-color": "rgba(255,255,255,0.6)"
+         },
+         "interactive": true
+      },
+      {
+         "id": "state-labels",
+         "type": "symbol",
+         "source": "osm2vectortiles",
+         "source-layer": "placenames-large",
+         "filter": [
+            "==",
+            "admin_level",
+            "4"
+         ],
+         "layout": {
+            "text-font": [
+               "Open Sans Italic"
+            ],
+            "text-field": "{name}",
+            "text-size": {
+                
+            "stops": [
+                  [
+                     5,
+                     9
+                  ],
+                  [
+                     7,
+                     11
+                  ]
+               ]        
+                
+        
+            }
+         },
+         "paint": {
+            "text-color": "#793679",
+            "text-halo-width": 1.5,
+            "text-halo-color": "rgba(255,255,255,0.6)"
+         },
+         "interactive": true
+      },
+      {
+         "id": "country-labels",
+         "type": "symbol",
+         "source": "osm2vectortiles",
+         "source-layer": "placenames-large",
+         "filter": [
+            "==",
+            "admin_level",
+            "2"
+         ],
+         "layout": {
+            "text-font": [
+               "Open Sans Regular"
+            ],
+            "text-field": "{name}",
+            "text-size": {
+                
+            "stops": [
+                  [
+                     3,
+                     10
+                  ],
+                  [
+                     10,
+                     14
+                  ]
+               ]        
+                
+        
+            }
+         },
+         "paint": {
+            "text-color": "#793679",
+            "text-halo-width": 1.5,
+            "text-halo-color": "rgba(255,255,255,0.6)"
+         },
+         "interactive": true
       }
+      
    ]
 }
