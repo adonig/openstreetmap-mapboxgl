@@ -1989,277 +1989,7 @@
          },
          "interactive": true
       },
-      {
-         "id": "admin-level-2",
-         "minzoom": 4,
-         "type": "line",
-         "source": "osm2vectortiles",
-         "source-layer": "admin-low-zoom",
-         "filter": [
-            "==",
-            "admin_level",
-            "2"
-         ],
-         "layout": {
-            "line-join": "bevel"
-         },
-         "paint": {
-            "line-width": {
-               "stops": [
-                  [
-                     4,
-                     1.2
-                  ],
-                  [
-                     10,
-                     6
-                  ]
-               ]
-            },
-            "line-color": "#ac46ac",
-            "line-opacity": 0.4
-         },
-         "interactive": true
-      },
-      {
-         "id": "admin-level-3",
-         "minzoom": 4,
-         "type": "line",
-         "source": "osm2vectortiles",
-         "source-layer": "admin-low-zoom",
-         "filter": [
-            "==",
-            "admin_level",
-            "3"
-         ],
-         "layout": {
-            "line-join": "bevel"
-         },
-         "paint": {
-            "line-width": {
-               "stops": [
-                  [
-                     4,
-                     0.6
-                  ],
-                  [
-                     10,
-                     4
-                  ]
-               ]
-            },
-            "line-color": "#ac46ac",
-            "line-opacity": 0.4,
-            "line-dasharray": [
-               4,
-               2
-            ]
-         },
-         "interactive": true
-      },
-      {
-         "id": "admin-level-4",
-         "minzoom": 4,
-         "type": "line",
-         "source": "osm2vectortiles",
-         "source-layer": "admin-low-zoom",
-         "filter": [
-            "==",
-            "admin_level",
-            "2"
-         ],
-         "layout": {
-            "line-join": "bevel"
-         },
-         "paint": {
-            "line-width": {
-               "stops": [
-                  [
-                     4,
-                     0.4
-                  ],
-                  [
-                     12,
-                     3
-                  ]
-               ]
-            },
-            "line-color": "#ac46ac",
-            "line-opacity": 0.4,
-            "line-dasharray": [
-               4,
-               3
-            ]
-         },
-         "interactive": true
-      },
-      {
-         "id": "admin-level-5",
-         "minzoom": 11,
-         "type": "line",
-         "source": "osm2vectortiles",
-         "source-layer": "admin-low-zoom",
-         "filter": [
-            "==",
-            "admin_level",
-            "5"
-         ],
-         "layout": {
-            "line-join": "bevel"
-         },
-         "paint": {
-            "line-width": 2,
-            "line-color": "#ac46ac",
-            "line-opacity": 0.4,
-            "line-dasharray": [
-               6,
-               3,
-               2,
-               3,
-               2,
-               3
-            ]
-         },
-         "interactive": true
-      },
-      {
-         "id": "admin-level-6",
-         "minzoom": 11,
-         "type": "line",
-         "source": "osm2vectortiles",
-         "source-layer": "admin-low-zoom",
-         "filter": [
-            "==",
-            "admin_level",
-            "6"
-         ],
-         "layout": {
-            "line-join": "bevel"
-         },
-         "paint": {
-            "line-width": 2,
-            "line-color": "#ac46ac",
-            "line-opacity": 0.4,
-            "line-dasharray": [
-               6,
-               3,
-               2,
-               3
-            ]
-         },
-         "interactive": true
-      },
-      {
-         "id": "admin-level-7",
-         "minzoom": 12,
-         "type": "line",
-         "source": "osm2vectortiles",
-         "source-layer": "admin-low-zoom",
-         "filter": [
-            "==",
-            "admin_level",
-            "7"
-         ],
-         "layout": {
-            "line-join": "bevel"
-         },
-         "paint": {
-            "line-width": 1.5,
-            "line-color": "#ac46ac",
-            "line-opacity": 0.4,
-            "line-dasharray": [
-               5,
-               2
-            ]
-         },
-         "interactive": true
-      },
-      {
-         "id": "admin-level-8",
-         "minzoom": 12,
-         "type": "line",
-         "source": "osm2vectortiles",
-         "source-layer": "admin-low-zoom",
-         "filter": [
-            "==",
-            "admin_level",
-            "8"
-         ],
-         "layout": {
-            "line-join": "bevel"
-         },
-         "paint": {
-            "line-width": 1.5,
-            "line-color": "#ac46ac",
-            "line-opacity": 0.4,
-            "line-dasharray": [
-               5,
-               2
-            ]
-         },
-         "interactive": true
-      },
-      {
-         "id": "admin-level-9",
-         "minzoom": 13,
-         "type": "line",
-         "source": "osm2vectortiles",
-         "source-layer": "admin-low-zoom",
-         "filter": [
-            "==",
-            "admin_level",
-            "9"
-         ],
-         "layout": {
-            "line-join": "bevel"
-         },
-         "paint": {
-            "line-width": {
-               "stops": [
-                  [
-                     4,
-                     0.6
-                  ],
-                  [
-                     10,
-                     4
-                  ]
-               ]
-            },
-            "line-color": "#ac46ac",
-            "line-opacity": 0.4,
-            "line-dasharray": [
-               2,
-               3
-            ]
-         },
-         "interactive": true
-      },
-      {
-         "id": "admin-level-10",
-         "minzoom": 13,
-         "type": "line",
-         "source": "osm2vectortiles",
-         "source-layer": "admin-high-zoom",
-         "filter": [
-            "==",
-            "admin_level",
-            "10"
-         ],
-         "layout": {
-            "line-join": "bevel"
-         },
-         "paint": {
-            "line-width": 2,
-            "line-color": "#ac46ac",
-            "line-opacity": 0.4,
-            "line-dasharray": [
-               2,
-               3
-            ]
-         },
-         "interactive": true
-      },
+
       {
          "id": "roads-text-name",
          "type": "symbol",
@@ -2474,8 +2204,6 @@
          },
          "interactive": true
       },
-      
-      
       {
          "id": "placenames-small",
          "type": "symbol",
@@ -2487,8 +2215,7 @@
             ],
             "text-field": "{name}",
             "text-size": {
-                
-            "stops": [
+               "stops": [
                   [
                      12,
                      10
@@ -2497,9 +2224,7 @@
                      16,
                      15
                   ]
-               ]        
-                
-        
+               ]
             }
          },
          "paint": {
@@ -2520,8 +2245,7 @@
             ],
             "text-field": "{name}",
             "text-size": {
-                
-            "stops": [
+               "stops": [
                   [
                      5,
                      9
@@ -2530,9 +2254,7 @@
                      11,
                      13
                   ]
-               ]        
-                
-        
+               ]
             }
          },
          "paint": {
@@ -2558,8 +2280,7 @@
             ],
             "text-field": "{name}",
             "text-size": {
-                
-            "stops": [
+               "stops": [
                   [
                      5,
                      9
@@ -2568,9 +2289,7 @@
                      7,
                      11
                   ]
-               ]        
-                
-        
+               ]
             }
          },
          "paint": {
@@ -2596,8 +2315,7 @@
             ],
             "text-field": "{name}",
             "text-size": {
-                
-            "stops": [
+               "stops": [
                   [
                      3,
                      10
@@ -2606,9 +2324,7 @@
                      10,
                      14
                   ]
-               ]        
-                
-        
+               ]
             }
          },
          "paint": {
@@ -2617,7 +2333,269 @@
             "text-halo-color": "rgba(255,255,255,0.6)"
          },
          "interactive": true
-      }
+      },
       
+      {
+         "id": "admin-level-2",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "2"
+         ],
+         "layout": {
+            "line-join": "bevel"
+         },
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     4,
+                     1.2
+                  ],
+                  [
+                     10,
+                     6
+                  ]
+               ]
+            },
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-3",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "3"
+         ],
+         "layout": {
+            "line-join": "bevel"
+         },
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     4,
+                     0.6
+                  ],
+                  [
+                     10,
+                     4
+                  ]
+               ]
+            },
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               4,
+               2
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-4",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "4"
+         ],
+         "layout": {
+            "line-join": "bevel"
+         },
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     4,
+                     0.4
+                  ],
+                  [
+                     12,
+                     3
+                  ]
+               ]
+            },
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               4,
+               3
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-5",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "5"
+         ],
+         "layout": {
+            "line-join": "bevel"
+         },
+         "paint": {
+            "line-width": 2,
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               6,
+               3,
+               2,
+               3,
+               2,
+               3
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-6",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "6"
+         ],
+         "layout": {
+            "line-join": "bevel"
+         },
+         "paint": {
+            "line-width": 2,
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               6,
+               3,
+               2,
+               3
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-7",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "7"
+         ],
+         "layout": {
+            "line-join": "bevel"
+         },
+         "paint": {
+            "line-width": 1.5,
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               5,
+               2
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-8",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "8"
+         ],
+         "layout": {
+            "line-join": "bevel"
+         },
+         "paint": {
+            "line-width": 1.5,
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               5,
+               2
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-9",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-low-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "9"
+         ],
+         "layout": {
+            "line-join": "bevel"
+         },
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     4,
+                     0.6
+                  ],
+                  [
+                     10,
+                     4
+                  ]
+               ]
+            },
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               2,
+               3
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "admin-level-10",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "admin-high-zoom",
+         "filter": [
+            "==",
+            "admin_level",
+            "10"
+         ],
+         "layout": {
+            "line-join": "bevel"
+         },
+         "paint": {
+            "line-width": 2,
+            "line-color": "#ac46ac",
+            "line-opacity": 0.4,
+            "line-dasharray": [
+               2,
+               3
+            ]
+         },
+         "interactive": true
+      }
    ]
 }
