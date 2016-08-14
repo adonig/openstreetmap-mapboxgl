@@ -2000,7 +2000,9 @@
             "admin_level",
             "2"
          ],
-         "line-join": "bevel",
+         "layout": {
+            "line-join": "bevel"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -2030,7 +2032,9 @@
             "admin_level",
             "3"
          ],
-         "line-join": "bevel",
+         "layout": {
+            "line-join": "bevel"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -2064,7 +2068,9 @@
             "admin_level",
             "2"
          ],
-         "line-join": "bevel",
+         "layout": {
+            "line-join": "bevel"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -2098,7 +2104,9 @@
             "admin_level",
             "5"
          ],
-         "line-join": "bevel",
+         "layout": {
+            "line-join": "bevel"
+         },
          "paint": {
             "line-width": 2,
             "line-color": "#ac46ac",
@@ -2125,7 +2133,9 @@
             "admin_level",
             "6"
          ],
-         "line-join": "bevel",
+         "layout": {
+            "line-join": "bevel"
+         },
          "paint": {
             "line-width": 2,
             "line-color": "#ac46ac",
@@ -2150,7 +2160,9 @@
             "admin_level",
             "7"
          ],
-         "line-join": "bevel",
+         "layout": {
+            "line-join": "bevel"
+         },
          "paint": {
             "line-width": 1.5,
             "line-color": "#ac46ac",
@@ -2173,7 +2185,9 @@
             "admin_level",
             "8"
          ],
-         "line-join": "bevel",
+         "layout": {
+            "line-join": "bevel"
+         },
          "paint": {
             "line-width": 1.5,
             "line-color": "#ac46ac",
@@ -2196,7 +2210,9 @@
             "admin_level",
             "9"
          ],
-         "line-join": "bevel",
+         "layout": {
+            "line-join": "bevel"
+         },
          "paint": {
             "line-width": {
                "stops": [
@@ -2230,7 +2246,9 @@
             "admin_level",
             "10"
          ],
-         "line-join": "bevel",
+         "layout": {
+            "line-join": "bevel"
+         },
          "paint": {
             "line-width": 2,
             "line-color": "#ac46ac",
