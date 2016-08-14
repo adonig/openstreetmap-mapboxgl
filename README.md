@@ -37,3 +37,8 @@ This will use the tileserver-gl-light project to serve up the PBF. The actual os
 4. docker build -t tileserver-gl-light .
 5. docker run -d -it -p 0.0.0.0:10000:8080 -v $(pwd)/import:/import tileserver-gl-light
 
+## Styling
+
+### tm2source tweaks between openstreetmap-carto and openstreetmap-mapboxgl
+
+1. "bridges" are not excluded from the roads-casing and roads-fill layers. ([fix](https://github.com/stirringhalo/openstreetmap-carto-vector-tiles/commit/f84c1a3d07c4700a3436cffb23dcee904aa796e0)). The rationale is that it makes proper styling and ordering of roads much easier
