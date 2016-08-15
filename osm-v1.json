@@ -924,6 +924,74 @@
          "interactive": true
       },
       {
+         "id": "highway-motorway-casing-tunnel",
+         "minzoom": 5,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "tunnels",
+         "filter": [
+            "==",
+            "feature",
+            "highway_motorway"
+         ],
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
+         "paint": {
+            "line-gap-width": {
+               "stops": [
+                  [
+                     5,
+                     0.15
+                  ],
+                  [
+                     19,
+                     12.5
+                  ]
+               ]
+            },
+            "line-color": "#dc2a67",
+            "line-dasharray": [
+               4,
+               2
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "highway-motorway-fill-tunnel",
+         "minzoom": 5,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "tunnels",
+         "filter": [
+            "==",
+            "feature",
+            "highway_motorway"
+         ],
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
+         "paint": {
+            "line-width": {
+               "stops": [
+                  [
+                     5,
+                     0.15
+                  ],
+                  [
+                     19,
+                     12.5
+                  ]
+               ]
+            },
+            "line-color": "#F0BBC5"
+         },
+         "interactive": true
+      },
+      {
          "id": "highway-motorway-casing",
          "minzoom": 5,
          "type": "line",
