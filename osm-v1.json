@@ -1989,7 +1989,6 @@
          },
          "interactive": true
       },
-
       {
          "id": "roads-text-name",
          "type": "symbol",
@@ -2334,7 +2333,6 @@
          },
          "interactive": true
       },
-      
       {
          "id": "admin-level-2",
          "type": "line",
@@ -2368,6 +2366,7 @@
       },
       {
          "id": "admin-level-3",
+         "minzoom": 4,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "admin-low-zoom",
@@ -2403,6 +2402,7 @@
       },
       {
          "id": "admin-level-4",
+         "minzoom": 5,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "admin-low-zoom",
@@ -2438,6 +2438,7 @@
       },
       {
          "id": "admin-level-5",
+         "minzoom": 6,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "admin-low-zoom",
@@ -2466,6 +2467,7 @@
       },
       {
          "id": "admin-level-6",
+         "minzoom": 7,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "admin-low-zoom",
@@ -2492,6 +2494,7 @@
       },
       {
          "id": "admin-level-7",
+         "minzoom": 8,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "admin-low-zoom",
@@ -2516,6 +2519,7 @@
       },
       {
          "id": "admin-level-8",
+         "minzoom": 9,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "admin-low-zoom",
@@ -2540,6 +2544,7 @@
       },
       {
          "id": "admin-level-9",
+         "minzoom": 10,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "admin-low-zoom",
@@ -2575,6 +2580,7 @@
       },
       {
          "id": "admin-level-10",
+         "minzoom": 11,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "admin-high-zoom",
