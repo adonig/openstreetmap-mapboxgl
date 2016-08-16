@@ -4,13 +4,15 @@ This project uses the [MapboxGL](https://github.com/mapbox/mapbox-gl) library wi
 
 The goal of this project isn't to be a 1-to-1 replacement for openstreetmap-carto. However, this project is aimed at making a style similar to openstreetmap-carto using the same tileschema. The focus here is clarity and simplicity without necessarily showing all the attributes that openstreetmap-carto does.
 
-#### If you have an issue with the openstreetmap-carto branch, please raise it here as to avoid confusing the main OSM2VectorTiles issues page.
+#### This project is not affiliated with Mapbox and is incompatible with the Mapbox Streets tile schema
 
 ![Screenshot](screenshot.png "Screenshot")
  
 All building is using a branch of the OSM2VectorTiles project. The build will be similiar to that pipeline.
 
 To use the following instructions, you will need to have Docker and Docker-compose installed. You may also need to add yourself to the "docker" group to avoid having to run the docker-compose commands under sudo.
+
+#### If you have an issue with the openstreetmap-carto branch, please raise it here as to avoid confusing the main OSM2VectorTiles issues page.
 
 ## Building:
 
