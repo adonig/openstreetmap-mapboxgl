@@ -2670,6 +2670,39 @@
             ]
          },
          "interactive": true
+      },
+      {
+         "id": "nature-reserve-boundaries-outer",
+         "minzoom": 7,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "nature-reserve-boundaries",
+         "layout": {
+            "line-join": "round"
+         },
+         "paint": {
+            "line-color": "green",
+            "line-opacity": 0.15,
+            "line-gap-width": 4
+         },
+         "interactive": true
+      },
+      {
+         "id": "nature-reserve-boundaries-inner",
+         "minzoom": 7,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "nature-reserve-boundaries",
+         "layout": {
+            "line-join": "round"
+         },
+         "paint": {
+            "line-color": "green",
+            "line-opacity": 0.15,
+            "line-offset": -1,
+            "line-width": 4
+         },
+         "interactive": true
       }
    ]
 }
