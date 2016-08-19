@@ -2703,6 +2703,30 @@
             "line-width": 4
          },
          "interactive": true
+      },
+      {
+         "id": "nature-reserve-text",
+         "type": "symbol",
+         "source": "osm2vectortiles",
+         "source-layer": "nature-reserve-text",
+         "layout": {
+            "text-font": [
+               "Open Sans Regular"
+            ],
+            "text-field": "{name}",
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-offset": [
+               0,
+               -1
+            ]
+         },
+         "paint": {
+            "text-color": "green",
+            "text-halo-width": 1,
+            "text-halo-color": "rgba(255,255,255,0.6)"
+         },
+         "interactive": true
       }
    ]
 }
