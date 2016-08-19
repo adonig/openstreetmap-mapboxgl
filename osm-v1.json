@@ -2681,7 +2681,8 @@
             "line-join": "round"
          },
          "paint": {
-            "line-color": "#66ff66",
+            "line-opacity": 0.1,
+            "line-color": "green",
             "line-gap-width": 4
          },
          "interactive": true
@@ -2696,7 +2697,8 @@
             "line-join": "round"
          },
          "paint": {
-            "line-color": "#99ff99",
+            "line-opacity": 0.1,
+            "line-color": "green",
             "line-offset": 1,
             "line-width": 4
          },
