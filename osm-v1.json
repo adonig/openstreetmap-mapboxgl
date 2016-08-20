@@ -132,6 +132,24 @@
          "interactive": true
       },
       {
+         "id": "landcover-power",
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover",
+         "filter": [
+            "in",
+            "feature",
+            "power_station",
+            "power_generator",
+            "power_sub_station",
+            "power_substation"
+         ],
+         "paint": {
+            "fill-color": "#EBDBE8"
+         },
+         "interactive": true
+      },
+      {
          "id": "landcover-grasses",
          "type": "fill",
          "source": "osm2vectortiles",
