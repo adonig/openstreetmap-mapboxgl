@@ -2710,6 +2710,165 @@
             "text-halo-color": "rgba(255,255,255,0.6)"
          },
          "interactive": true
+      },
+
+
+
+
+
+
+
+      {
+         "id": "aerialways-goods-crosses",
+         "minzoom": 12,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "aerialways",
+         "filter": [
+            "==",
+            "aerialway",
+            "goods"
+         ],         
+         "layout": {
+            "line-join": "round"
+         },
+         "paint": {
+            "line-color": "#707070",
+            "line-width": 3.5,
+            "line-dasharray": [
+               6,
+               25
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "aerialways-goods-line",
+         "minzoom": 12,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "aerialways",
+         "filter": [
+            "==",
+            "aerialway",
+            "goods"
+         ], 
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
+         "paint": {
+            "line-color": "#808080",
+            "line-width": 1
+         },
+         "interactive": true
+      },
+      {
+         "id": "aerialways-cable-crosses",
+         "minzoom": 12,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "aerialways",
+         "filter": [
+            "in",
+            "aerialway",
+            "cable_car",
+            "gondola"
+         ],         
+         "layout": {
+            "line-join": "round"
+         },
+         "paint": {
+            "line-color": "black",
+            "line-width": 3,
+            "line-dasharray": [
+               0.4,
+               13
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "aerialways-cable-line",
+         "minzoom": 12,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "aerialways",
+         "filter": [
+            "in",
+            "aerialway",
+            "cable_car",
+            "gondola"
+         ], 
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
+         "paint": {
+            "line-color": "#808080",
+            "line-width": 1
+         },
+         "interactive": true
+      },
+      {
+         "id": "aerialways-lift-crosses",
+         "minzoom": 12,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "aerialways",
+         "filter": [
+            "in",
+            "aerialway",
+            "chair_lift",
+            "drag_lift",
+            "t-bar",
+            "j-bar",
+            "platter",
+            "rope_tow"
+         ],         
+         "layout": {
+            "line-join": "round"
+         },
+         "paint": {
+            "line-color": "black",
+            "line-width": 4,
+            "line-dasharray": [
+               1,
+               30
+            ]
+         },
+         "interactive": true
+      },
+      {
+         "id": "aerialways-lift-line",
+         "minzoom": 12,
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "aerialways",
+         "filter": [
+            "in",
+            "aerialway",
+            "chair_lift",
+            "drag_lift",
+            "t-bar",
+            "j-bar",
+            "platter",
+            "rope_tow"
+         ],
+         "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+         },
+         "paint": {
+            "line-color": "#808080",
+            "line-width": 1
+         },
+         "interactive": true
       }
+
+
+
+
+
    ]
 }
