@@ -19,11 +19,6 @@
             "background-color": "#b5d0d0"
          }
       },
-
-
-
-
-
       {
          "id": "shapefiles-necountries",
          "minzoom": 1,
@@ -120,11 +115,6 @@
          },
          "interactive": true
       },
-
-
-
-
-
       {
          "id": "landcover-wood-forest",
          "type": "fill",
@@ -746,11 +736,6 @@
          },
          "interactive": true
       },
-
-
-
-
-
       {
          "id": "water-glacier",
          "type": "fill",
@@ -1001,11 +986,6 @@
          },
          "interactive": true
       },
-
-
-
-
-
       {
          "id": "roads-motorway-casing-tunnel",
          "minzoom": 5,
@@ -2047,11 +2027,6 @@
          },
          "interactive": true
       },
-
-
-
-
-
       {
          "id": "power-line",
          "minzoom": 13,
@@ -2124,11 +2099,6 @@
          "paint": {},
          "interactive": true
       },
-
-
-
-
-
       {
          "id": "citywalls",
          "type": "line",
@@ -2152,11 +2122,6 @@
          },
          "interactive": true
       },
-
-
-
-
-
       {
          "id": "placenames-small",
          "type": "symbol",
@@ -2254,6 +2219,7 @@
       },
       {
          "id": "country-labels",
+         "minzoom": 2,
          "type": "symbol",
          "source": "osm2vectortiles",
          "source-layer": "placenames-large",
@@ -2287,11 +2253,6 @@
          },
          "interactive": true
       },
-
-
-
-
-
       {
          "id": "buildings",
          "minzoom": 13,
@@ -2349,11 +2310,6 @@
          },
          "interactive": true
       },
-
-
-
-
-
       {
          "id": "amenity-points",
          "type": "symbol",
@@ -2367,11 +2323,6 @@
          "paint": {},
          "interactive": true
       },
-
-
-
-
-
       {
          "id": "ferry-routes",
          "type": "line",
@@ -2422,11 +2373,6 @@
          },
          "interactive": true
       },
-
-
-
-
-
       {
          "id": "aerialways-goods-crosses",
          "minzoom": 12,
@@ -2437,7 +2383,7 @@
             "==",
             "aerialway",
             "goods"
-         ],         
+         ],
          "layout": {
             "line-join": "round"
          },
@@ -2461,7 +2407,7 @@
             "==",
             "aerialway",
             "goods"
-         ], 
+         ],
          "layout": {
             "line-join": "round",
             "line-cap": "round"
@@ -2483,7 +2429,7 @@
             "aerialway",
             "cable_car",
             "gondola"
-         ],         
+         ],
          "layout": {
             "line-join": "round"
          },
@@ -2508,7 +2454,7 @@
             "aerialway",
             "cable_car",
             "gondola"
-         ], 
+         ],
          "layout": {
             "line-join": "round",
             "line-cap": "round"
@@ -2534,7 +2480,7 @@
             "j-bar",
             "platter",
             "rope_tow"
-         ],         
+         ],
          "layout": {
             "line-join": "round"
          },
@@ -2574,13 +2520,9 @@
          },
          "interactive": true
       },
-
-
-
-
-
       {
          "id": "admin-level-2",
+         "minzoom": 1,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "admin-low-zoom",
@@ -2612,7 +2554,7 @@
       },
       {
          "id": "admin-level-3",
-         "minzoom": 4,
+         "minzoom": 1,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "admin-low-zoom",
@@ -2648,7 +2590,7 @@
       },
       {
          "id": "admin-level-4",
-         "minzoom": 5,
+         "minzoom": 3,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "admin-low-zoom",
@@ -2889,11 +2831,6 @@
          },
          "interactive": true
       },
-
-
-
-
-
       {
          "id": "addressing-interpolation",
          "type": "line",
