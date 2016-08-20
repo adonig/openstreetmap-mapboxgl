@@ -2882,7 +2882,28 @@
             "line-width": 1
          },
          "interactive": true
-      }
+      },
+
+      {
+         "id": "landcover-zoo",
+         "type": "line",
+         "source": "osm2vectortiles",
+         "source-layer": "tourism-boundary",
+         "filter": [
+            "in",
+            "tourism",
+            "zoo",
+            "theme_park"
+         ],
+         "layout": {
+            "line-join": "bevel"
+         },
+         "paint": {
+            "line-width": 2.5,
+            "line-color": "#734a08"
+         },
+         "interactive": true
+      },
 
 
 
