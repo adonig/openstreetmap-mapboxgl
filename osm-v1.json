@@ -2900,6 +2900,7 @@
          },
          "paint": {
             "line-width": 2.5,
+            "line-opacity": 0.5,
             "line-color": "#734a08"
          },
          "interactive": true
