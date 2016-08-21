@@ -104,7 +104,7 @@
             "line-color": "#9cf"
          },
          "interactive": true
-      },  
+      },
       {
          "id": "shapefiles-builtup",
          "minzoom": 7,
@@ -117,11 +117,6 @@
          },
          "interactive": true
       },
-
-
-
-
-
       {
          "id": "landcover-wood-forest",
          "type": "fill",
@@ -2131,6 +2126,7 @@
       },
       {
          "id": "placenames-small",
+         "minzoom": 11,
          "type": "symbol",
          "source": "osm2vectortiles",
          "source-layer": "placenames-small",
@@ -2161,6 +2157,7 @@
       },
       {
          "id": "placenames-medium",
+         "minzoom": 5,
          "type": "symbol",
          "source": "osm2vectortiles",
          "source-layer": "placenames-medium",
@@ -2191,6 +2188,7 @@
       },
       {
          "id": "state-labels",
+         "minzoom": 3,
          "type": "symbol",
          "source": "osm2vectortiles",
          "source-layer": "placenames-large",
