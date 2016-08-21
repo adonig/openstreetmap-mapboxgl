@@ -740,6 +740,7 @@
       },
       {
          "id": "water-glacier",
+         "minzoom": 5,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "water-areas",
@@ -756,6 +757,7 @@
       },
       {
          "id": "water-dock-canal",
+         "minzoom": 8,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "water-areas",
@@ -772,6 +774,7 @@
       },
       {
          "id": "water-basin",
+         "minzoom": 6,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "water-areas",
@@ -787,6 +790,7 @@
       },
       {
          "id": "water-water",
+         "minzoom": 5,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "water-areas",
@@ -802,6 +806,7 @@
       },
       {
          "id": "water-reservoir",
+         "minzoom": 5,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "water-areas",
@@ -817,6 +822,7 @@
       },
       {
          "id": "water-riverbank",
+         "minzoom": 5,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "water-areas",
@@ -832,6 +838,7 @@
       },
       {
          "id": "water-stream-ditch-drain-casing",
+         "minzoom": 12,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "water-lines-casing",
@@ -868,8 +875,8 @@
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "water-lines-low-zoom",
-         "minzoom": 8,
-         "maxzoom": 11,
+         "minzoom": 7,
+         "maxzoom": 10,
          "filter": [
             "==",
             "waterway",
@@ -901,7 +908,7 @@
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "water-lines",
-         "minzoom": 12,
+         "minzoom": 11,
          "filter": [
             "in",
             "waterway",
@@ -935,7 +942,7 @@
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "water-lines",
-         "minzoom": 13,
+         "minzoom": 12,
          "filter": [
             "in",
             "waterway",
@@ -966,6 +973,7 @@
       },
       {
          "id": "water-lines-text",
+         "minzoom": 12,
          "type": "symbol",
          "source": "osm2vectortiles",
          "source-layer": "water-lines-text",
