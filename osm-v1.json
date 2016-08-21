@@ -650,7 +650,7 @@
       },
       {
          "id": "landcover-playground",
-         "minzoom": 12,         
+         "minzoom": 12,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -801,7 +801,7 @@
       },
       {
          "id": "landcover-track",
-         "minzoom": 9,         
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -2396,7 +2396,7 @@
       },
       {
          "id": "buildings",
-         "minzoom": 13,
+         "minzoom": 12,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "buildings",
@@ -2408,7 +2408,7 @@
       },
       {
          "id": "buildings-major-terminal",
-         "minzoom": 13,
+         "minzoom": 12,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "buildings-major",
@@ -2442,7 +2442,7 @@
       },
       {
          "id": "buildings-bridge",
-         "minzoom": 12,
+         "minzoom": 11,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "bridge",
