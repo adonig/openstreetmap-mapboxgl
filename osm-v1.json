@@ -2939,10 +2939,10 @@
          "source": "osm2vectortiles",
          "source-layer": "nature-reserve-boundaries",
          "layout": {
-            "line-join": "round"
+            "line-join": "miter"
          },
          "paint": {
-            "line-opacity": 0.25,
+            "line-opacity": 0.2,
             "line-color": "green",
             "line-width": 4
          },
