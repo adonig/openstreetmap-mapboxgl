@@ -104,7 +104,7 @@
             "line-color": "#9cf"
          },
          "interactive": true
-      },
+      },  
       {
          "id": "shapefiles-builtup",
          "minzoom": 7,
@@ -117,11 +117,11 @@
          },
          "interactive": true
       },
-      
-      
-      
-      
-      
+
+
+
+
+
       {
          "id": "landcover-wood-forest",
          "type": "fill",
@@ -2840,6 +2840,7 @@
       },
       {
          "id": "addressing-interpolation",
+         "minzoom": 14,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "interpolation",
@@ -2891,6 +2892,7 @@
       },
       {
          "id": "addressing-building-text",
+         "minzoom": 14,
          "type": "symbol",
          "source": "osm2vectortiles",
          "source-layer": "building-text",
