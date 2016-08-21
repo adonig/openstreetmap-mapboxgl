@@ -2466,6 +2466,7 @@
       },
       {
          "id": "ferry-routes",
+         "minzoom": 6,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "ferry-routes",
@@ -2492,6 +2493,7 @@
       },
       {
          "id": "ferry-routes-text",
+         "minzoom": 12,         
          "type": "symbol",
          "source": "osm2vectortiles",
          "source-layer": "ferry-routes-text",
