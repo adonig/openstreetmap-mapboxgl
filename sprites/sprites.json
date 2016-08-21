@@ -3,7 +3,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 188,
+    "x": 192,
     "y": 52
   },
   "aeroway_helipad": {
@@ -192,7 +192,7 @@
     "height": 9,
     "pixelRatio": 1,
     "width": 9,
-    "x": 292,
+    "x": 296,
     "y": 52
   },
   "amenity_motorcycle_parking": {
@@ -213,7 +213,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 9,
-    "x": 200,
+    "x": 204,
     "y": 52
   },
   "amenity_pharmacy": {
@@ -241,7 +241,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 209,
+    "x": 213,
     "y": 52
   },
   "amenity_post_office": {
@@ -325,21 +325,21 @@
     "height": 10,
     "pixelRatio": 1,
     "width": 10,
-    "x": 272,
+    "x": 276,
     "y": 52
   },
   "barrier_gate": {
     "height": 5,
     "pixelRatio": 1,
     "width": 6,
-    "x": 187,
+    "x": 190,
     "y": 68
   },
   "barrier_lift_gate": {
     "height": 5,
     "pixelRatio": 1,
     "width": 7,
-    "x": 193,
+    "x": 196,
     "y": 68
   },
   "bench_bench": {
@@ -381,21 +381,21 @@
     "height": 10,
     "pixelRatio": 1,
     "width": 10,
-    "x": 282,
+    "x": 286,
     "y": 52
   },
   "highway_bus_stop": {
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 221,
+    "x": 225,
     "y": 52
   },
   "highway_elevator": {
     "height": 12,
     "pixelRatio": 1,
     "width": 12,
-    "x": 233,
+    "x": 237,
     "y": 52
   },
   "highway_ford": {
@@ -409,7 +409,7 @@
     "height": 9,
     "pixelRatio": 1,
     "width": 9,
-    "x": 301,
+    "x": 305,
     "y": 52
   },
   "highway_traffic_signals": {
@@ -499,23 +499,23 @@
   "motorway": {
     "height": 13,
     "pixelRatio": 1,
-    "width": 3,
+    "width": 4,
     "x": 314,
     "y": 20
   },
   "motorway-bridge": {
     "height": 13,
     "pixelRatio": 1,
-    "width": 3,
-    "x": 317,
-    "y": 20
+    "width": 4,
+    "x": 314,
+    "y": 36
   },
   "motorway-tunnel": {
     "height": 13,
     "pixelRatio": 1,
-    "width": 5,
-    "x": 314,
-    "y": 36
+    "width": 4,
+    "x": 174,
+    "y": 52
   },
   "muslim": {
     "height": 16,
@@ -528,42 +528,42 @@
     "height": 8,
     "pixelRatio": 1,
     "width": 8,
-    "x": 310,
-    "y": 52
+    "x": 160,
+    "y": 68
   },
   "natural_saddle": {
     "height": 8,
     "pixelRatio": 1,
     "width": 8,
-    "x": 160,
+    "x": 168,
     "y": 68
   },
   "natural_spring": {
     "height": 7,
     "pixelRatio": 1,
     "width": 5,
-    "x": 168,
-    "y": 68
+    "x": 314,
+    "y": 52
   },
   "power_tower": {
     "height": 7,
     "pixelRatio": 1,
     "width": 7,
-    "x": 173,
+    "x": 176,
     "y": 68
   },
   "power_tower_small": {
     "height": 3,
     "pixelRatio": 1,
     "width": 3,
-    "x": 200,
+    "x": 203,
     "y": 68
   },
   "railway_level_crossing": {
     "height": 7,
     "pixelRatio": 1,
     "width": 7,
-    "x": 180,
+    "x": 183,
     "y": 68
   },
   "shinto": {
@@ -626,7 +626,7 @@
     "height": 12,
     "pixelRatio": 1,
     "width": 14,
-    "x": 245,
+    "x": 249,
     "y": 52
   },
   "shop_car_parts": {
@@ -682,7 +682,7 @@
     "height": 11,
     "pixelRatio": 1,
     "width": 13,
-    "x": 259,
+    "x": 263,
     "y": 52
   },
   "shop_copyshop": {
@@ -864,7 +864,7 @@
     "height": 13,
     "pixelRatio": 1,
     "width": 14,
-    "x": 174,
+    "x": 178,
     "y": 52
   },
   "shop_toys": {
@@ -899,8 +899,8 @@
     "height": 1,
     "pixelRatio": 1,
     "width": 1,
-    "x": 319,
-    "y": 36
+    "x": 318,
+    "y": 20
   },
   "taoist": {
     "height": 16,

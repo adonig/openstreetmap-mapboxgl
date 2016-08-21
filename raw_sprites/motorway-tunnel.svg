@@ -9,9 +9,9 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="svg2"
-   viewBox="0 0 5.0000002 13"
+   viewBox="0 0 4.0000002 13"
    height="13"
-   width="5"
+   width="4"
    inkscape:version="0.91 r13725"
    sodipodi:docname="motorway-tunnel.svg">
   <sodipodi:namedview
@@ -32,9 +32,9 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      units="px"
-     inkscape:zoom="22.627417"
-     inkscape:cx="-6.3823481"
-     inkscape:cy="9.2500852"
+     inkscape:zoom="16"
+     inkscape:cx="-5.9718749"
+     inkscape:cy="-0.17527865"
      inkscape:window-x="1360"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -56,14 +56,14 @@
   <rect
      style="fill:#dc2a67;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect4140"
-     width="3"
+     width="2"
      height="13"
      x="0"
      y="0" />
   <rect
      style="fill:#f0bbc5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect4138"
-     width="5"
+     width="4"
      height="11"
      x="0"
      y="1" />
