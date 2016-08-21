@@ -118,7 +118,26 @@
          "interactive": true
       },
       {
+         "id": "landcover-wood-forest-lz",
+         "minzoom": 7,
+         "maxzoom": 8,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover-low-zoom",
+         "filter": [
+            "in",
+            "feature",
+            "landuse_forest",
+            "natural_wood"
+         ],
+         "paint": {
+            "fill-color": "#add19e"
+         },
+         "interactive": true
+      },
+      {
          "id": "landcover-wood-forest",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -135,6 +154,7 @@
       },
       {
          "id": "landcover-zoo",
+         "minzoom": 9,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "tourism-boundary",
@@ -156,6 +176,7 @@
       },
       {
          "id": "landcover-power",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -174,6 +195,7 @@
       },
       {
          "id": "landcover-grasses",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -195,6 +217,7 @@
       },
       {
          "id": "landcover-scrub",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -210,6 +233,7 @@
       },
       {
          "id": "landcover-park",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -227,14 +251,15 @@
       },
       {
          "id": "landcover-orchard",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
          "filter": [
             "in",
             "feature",
-            "leisure_vineyard",
-            "leisure_orchard"
+            "landuse_vineyard",
+            "landuse_orchard"
          ],
          "paint": {
             "fill-color": "#aedfa3"
@@ -243,6 +268,7 @@
       },
       {
          "id": "landcover-residential",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -259,6 +285,7 @@
       },
       {
          "id": "landcover-retail",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -275,6 +302,7 @@
       },
       {
          "id": "landcover-commercial",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -291,6 +319,7 @@
       },
       {
          "id": "landcover-industrial",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -308,6 +337,7 @@
       },
       {
          "id": "landcover-farmland",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -326,6 +356,7 @@
       },
       {
          "id": "landcover-farmyard",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -342,6 +373,7 @@
       },
       {
          "id": "landcover-aerodrome",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -357,6 +389,7 @@
       },
       {
          "id": "landcover-allotments",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -372,6 +405,7 @@
       },
       {
          "id": "landcover-apron",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -386,7 +420,27 @@
          "interactive": true
       },
       {
+         "id": "landcover-bare_ground-lz",
+         "minzoom": 8,
+         "maxzoom": 9,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover-low-zoom",
+         "filter": [
+            "in",
+            "feature",
+            "natural_bare_rock",
+            "natural_scree",
+            "natural_shinkgle"
+         ],
+         "paint": {
+            "fill-color": "#eee5dc"
+         },
+         "interactive": true
+      },
+      {
          "id": "landcover-bare_ground",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -404,6 +458,7 @@
       },
       {
          "id": "landcover-campsite",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -421,6 +476,7 @@
       },
       {
          "id": "landcover-cemetery",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -437,6 +493,7 @@
       },
       {
          "id": "landcover-construction",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -453,7 +510,26 @@
          "interactive": true
       },
       {
+         "id": "landcover-danger_area-lz",
+         "minzoom": 8,
+         "maxzoom": 9,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover-low-zoom",
+         "filter": [
+            "==",
+            "feature",
+            "military_danger_area"
+         ],
+         "paint": {
+            "fill-color": "pink",
+            "fill-opacity": 0.3
+         },
+         "interactive": true
+      },
+      {
          "id": "landcover-danger_area",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -470,6 +546,7 @@
       },
       {
          "id": "landcover-garages",
+         "minzoom": 12,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -485,6 +562,7 @@
       },
       {
          "id": "landcover-heath",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -501,7 +579,26 @@
          "interactive": true
       },
       {
+         "id": "landcover-mud-lz",
+         "minzoom": 8,
+         "maxzoom": 9,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover-low-zoom",
+         "filter": [
+            "in",
+            "feature",
+            "wetland_mud",
+            "wetland_tidalflat"
+         ],
+         "paint": {
+            "fill-color": "rgba(203,177,154,0.3)"
+         },
+         "interactive": true
+      },
+      {
          "id": "landcover-mud",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -518,6 +615,7 @@
       },
       {
          "id": "landcover-parking",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -535,6 +633,7 @@
       },
       {
          "id": "landcover-place_of_worship",
+         "minzoom": 12,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -551,6 +650,7 @@
       },
       {
          "id": "landcover-playground",
+         "minzoom": 12,         
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -566,6 +666,7 @@
       },
       {
          "id": "landcover-rest_area",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -581,7 +682,25 @@
          "interactive": true
       },
       {
+         "id": "landcover-sand-lz",
+         "minzoom": 8,
+         "maxzoom": 9,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landcover-low-zoom",
+         "filter": [
+            "==",
+            "feature",
+            "natural_sand"
+         ],
+         "paint": {
+            "fill-color": "#f5e9c6"
+         },
+         "interactive": true
+      },
+      {
          "id": "landcover-sand",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -597,6 +716,7 @@
       },
       {
          "id": "landcover-societal_amenities",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -616,6 +736,7 @@
       },
       {
          "id": "landcover-station",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -631,6 +752,7 @@
       },
       {
          "id": "landcover-quarry",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -645,23 +767,8 @@
          "interactive": true
       },
       {
-         "id": "landcover-military",
-         "type": "fill",
-         "source": "osm2vectortiles",
-         "source-layer": "landuse_overlay",
-         "filter": [
-            "==",
-            "landuse",
-            "military"
-         ],
-         "paint": {
-            "fill-color": "#f55",
-            "fill-opacity": 0.3
-         },
-         "interactive": true
-      },
-      {
          "id": "landcover-beach",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -678,6 +785,7 @@
       },
       {
          "id": "landcover-pitch",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -693,6 +801,7 @@
       },
       {
          "id": "landcover-track",
+         "minzoom": 9,         
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -708,6 +817,7 @@
       },
       {
          "id": "landcover-stadium",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -724,6 +834,7 @@
       },
       {
          "id": "landcover-golf_course",
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "landcover",
@@ -735,6 +846,23 @@
          ],
          "paint": {
             "fill-color": "#b5e3b5"
+         },
+         "interactive": true
+      },
+      {
+         "id": "landcover-military",
+         "minzoom": 6,
+         "type": "fill",
+         "source": "osm2vectortiles",
+         "source-layer": "landuse_overlay",
+         "filter": [
+            "==",
+            "landuse",
+            "military"
+         ],
+         "paint": {
+            "fill-color": "#f55",
+            "fill-opacity": 0.3
          },
          "interactive": true
       },
