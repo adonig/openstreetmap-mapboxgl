@@ -332,14 +332,14 @@
     "height": 5,
     "pixelRatio": 1,
     "width": 6,
-    "x": 314,
-    "y": 36
+    "x": 187,
+    "y": 68
   },
   "barrier_lift_gate": {
     "height": 5,
     "pixelRatio": 1,
     "width": 7,
-    "x": 182,
+    "x": 193,
     "y": 68
   },
   "bench_bench": {
@@ -496,6 +496,27 @@
     "x": 32,
     "y": 84
   },
+  "motorway": {
+    "height": 13,
+    "pixelRatio": 1,
+    "width": 3,
+    "x": 314,
+    "y": 20
+  },
+  "motorway-bridge": {
+    "height": 13,
+    "pixelRatio": 1,
+    "width": 3,
+    "x": 317,
+    "y": 20
+  },
+  "motorway-tunnel": {
+    "height": 13,
+    "pixelRatio": 1,
+    "width": 5,
+    "x": 314,
+    "y": 36
+  },
   "muslim": {
     "height": 16,
     "pixelRatio": 1,
@@ -521,28 +542,28 @@
     "height": 7,
     "pixelRatio": 1,
     "width": 5,
-    "x": 314,
-    "y": 20
+    "x": 168,
+    "y": 68
   },
   "power_tower": {
     "height": 7,
     "pixelRatio": 1,
     "width": 7,
-    "x": 168,
+    "x": 173,
     "y": 68
   },
   "power_tower_small": {
     "height": 3,
     "pixelRatio": 1,
     "width": 3,
-    "x": 189,
+    "x": 200,
     "y": 68
   },
   "railway_level_crossing": {
     "height": 7,
     "pixelRatio": 1,
     "width": 7,
-    "x": 175,
+    "x": 180,
     "y": 68
   },
   "shinto": {
@@ -879,7 +900,7 @@
     "pixelRatio": 1,
     "width": 1,
     "x": 319,
-    "y": 20
+    "y": 36
   },
   "taoist": {
     "height": 16,
