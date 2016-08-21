@@ -21,7 +21,8 @@
       },
       {
          "id": "shapefiles-necountries",
-         "minzoom": 1,
+         "minzoom": 0,
+         "maxzoom": 3,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "necountries",
@@ -44,6 +45,7 @@
       },
       {
          "id": "shapefiles-world",
+         "minzoom": 0,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "world",
@@ -54,7 +56,7 @@
       },
       {
          "id": "shapefiles-coast-poly",
-         "minzoom": 10,
+         "minzoom": 9,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "coast-poly",
@@ -65,7 +67,7 @@
       },
       {
          "id": "shapefiles-icesheet-poly",
-         "minzoom": 6,
+         "minzoom": 5,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "icesheet-poly",
@@ -76,7 +78,7 @@
       },
       {
          "id": "shapefiles-icesheet-outlines",
-         "minzoom": 6,
+         "minzoom": 5,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "icesheet-outlines",
@@ -105,8 +107,8 @@
       },
       {
          "id": "shapefiles-builtup",
-         "minzoom": 8,
-         "maxzoom": 9,
+         "minzoom": 7,
+         "maxzoom": 8,
          "type": "fill",
          "source": "osm2vectortiles",
          "source-layer": "builtup",
@@ -115,6 +117,11 @@
          },
          "interactive": true
       },
+      
+      
+      
+      
+      
       {
          "id": "landcover-wood-forest",
          "type": "fill",
@@ -2848,6 +2855,7 @@
       },
       {
          "id": "addressing-housenumbers",
+         "minzoom": 14,
          "type": "symbol",
          "source": "osm2vectortiles",
          "source-layer": "housenumbers",
@@ -2865,6 +2873,7 @@
       },
       {
          "id": "addressing-housenames",
+         "minzoom": 14,
          "type": "symbol",
          "source": "osm2vectortiles",
          "source-layer": "housenames",
