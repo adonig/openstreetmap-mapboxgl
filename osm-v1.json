@@ -1521,8 +1521,6 @@
          "source-layer": "roads-14",
                   "filter": [
   "all",
-  ["!=", "bridge", "yes"],
-  ["!=", "tunnel", "yes"],
 ["!=", "feature", "highway_track"],
 ["!=", "feature", "highway_path"],
   ["!=", "feature", "highway_footway"],
