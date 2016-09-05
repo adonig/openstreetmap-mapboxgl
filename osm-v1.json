@@ -1541,7 +1541,7 @@
             ["!=", "feature", "railway_turntable"],
             ["!=", "feature", "railway_trams-service"],
             ["!=", "feature", "railway_disused"],
-            ["!=", "feature", "railway_construction"],
+            ["!=", "feature", "railway_construction"]
 
          ],
          "layout": {
