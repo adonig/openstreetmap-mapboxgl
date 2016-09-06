@@ -1515,7 +1515,7 @@
 
       {
          "id": "roads-13",
-         "minzoom": 12,
+         "minzoom": 13,
          "type": "line",
          "source": "osm2vectortiles",
          "source-layer": "roads-13",
