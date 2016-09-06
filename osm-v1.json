@@ -1518,7 +1518,7 @@
          "minzoom": 12,
          "type": "line",
          "source": "osm2vectortiles",
-         "source-layer": "roads-14",
+         "source-layer": "roads-13",
                   "filter": [
                   "all",
             ["!=", "feature", "highway_track"],
